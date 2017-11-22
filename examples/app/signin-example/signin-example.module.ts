@@ -4,12 +4,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MatButtonModule, MatIconModule } from '@angular/material';
 
-import { DrilldownListExampleComponent } from './drilldown-list-example.component';
-import { PipDrilldownListModule } from '../pip-webui2-entry';
+import { SigninExampleComponent } from './signin-example.component';
+import { PipSigninModule } from '../pip-webui2-entry';
 
 @NgModule({
   declarations: [
-    DrilldownListExampleComponent
+    SigninExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -19,13 +19,13 @@ import { PipDrilldownListModule } from '../pip-webui2-entry';
     MatButtonModule,
     MatIconModule,
 
-    PipDrilldownListModule
+    PipSigninModule
   ],
   exports: [
-    DrilldownListExampleComponent
+    SigninExampleComponent
   ],
   providers: [
     
   ],
 })
-export class DrilldownListExampleModule { }
+export class SigninExampleModule { }

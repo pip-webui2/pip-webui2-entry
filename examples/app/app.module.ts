@@ -12,12 +12,12 @@ import { PipThemesModule } from 'pip-webui2-themes';
 import { ExampleListModule } from './examples-list/examples-list.module';
 import { AppComponent } from './app.component';
 
-import { DrilldownListExampleModule } from './drilldown-list-example/drilldown-list-example.module';
+import { SigninExampleModule } from './signin-example/signin-example.module';
 
-import { DrilldownListExampleComponent } from './drilldown-list-example/drilldown-list-example.component';
+import { SigninExampleComponent } from './signin-example/signin-example.component';
 
 const appRoutes: Routes = [
-  { path: 'drilldown_list', component: DrilldownListExampleComponent },
+  { path: 'drilldown_list', component: SigninExampleComponent },
   { path: '', pathMatch: 'full', redirectTo: 'drilldown_list' }
 ];
 
@@ -40,7 +40,7 @@ const appRoutes: Routes = [
     PipThemesModule,
 
     ExampleListModule,
-    DrilldownListExampleModule,
+    SigninExampleModule,
 
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],
