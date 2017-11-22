@@ -4,6 +4,7 @@ import { ObservableMedia, MediaChange } from "@angular/flex-layout";
 import { Router } from "@angular/router";
 import { PipThemesService, Theme } from 'pip-webui2-themes';
 import { ExmapleListItem } from "./examples-list/shared/examples-list.model";
+import { PipMediaService, PipSidenavService } from 'pip-webui2-layouts';
 
 @Component({
   selector: 'app-root',
@@ -42,18 +43,20 @@ export class AppComponent {
       name: 'signin', id: 'signin', route: 'signin-example'
     }
   ];
-  @ViewChild('sidenav') sidenav: MatSidenav;
 
   public constructor(
+    public sidenav: PipSidenavService,
     private service: PipThemesService,
     private router: Router,
-		public media: ObservableMedia) {
+    public media: PipMediaService,
+    public globalMedia: ObservableMedia,) {
 
+    media.activate();
 
     this.themes = this.service.themes;
     this.theme = this.service.selectedTheme;
   
-    media.subscribe((change: MediaChange) => {
+    globalMedia.subscribe((change: MediaChange) => {
       this.activeMediaQuery = change && change.mqAlias == 'xs'? true : false;
       this.mode = change && change.mqAlias == 'xs'? null : 'side';
     })
@@ -77,6 +80,10 @@ export class AppComponent {
 
   }
 
+  public onMenuClick() {
+    this.sidenav.toggleNav();
+  }
+
   public ngOnInit() {}
 
   public ngAfterViewInit() {}
@@ -84,7 +91,6 @@ export class AppComponent {
   public onListItemIndexChanged(index: number) {
     
     this.listIndex = index;
-    this.sidenav.close();
   }
   
   public changeTheme() {
