@@ -27,8 +27,8 @@
                 </mat-input-container>
 
                 <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
-                    <button mat-raised-button *ngIf="!loading" type="button" color="primaty" [disabled]="!_signinForm.form.valid" (click)="onSubmit()">SIGNIN</button>
-                    <button mat-raised-button *ngIf="loading" type="button" color="accent" (click)="onAbort()">ABORT</button>
+                    <button mat-raised-button *ngIf="!loading" type="button" fxFlex="100" color="accent" [disabled]="!_signinForm.form.valid" (click)="onSubmit()">SIGNIN</button>
+                    <button mat-raised-button *ngIf="loading" type="button"  fxFlex="100" color="warm" (click)="onAbort()">ABORT</button>
                 </div>
             </div>
         </form>
