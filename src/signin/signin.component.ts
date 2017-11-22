@@ -1,11 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import {  Component, Input, Output, EventEmitter, ChangeDetectionStrategy  } from '@angular/core';
 
 @Component({
 	selector: 'pip-signin',
-	template: '<ng-content></ng-content>',
-	styleUrls: ['./signin.component.scss']
+	templateUrl: 'signin.component.html',
+	styleUrls: ['./signin.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PipSigninComponent implements OnInit {
+export class PipSigninComponent {
 
-	ngOnInit() { }
+	@Input() serverUrl: string;
+    @Input() email: string;
+    @Input() password: string;
+    @Input() error: string;
+    @Input() loading: boolean;
+
+    @Output() submit = new EventEmitter();
+    @Output() abort = new EventEmitter();
+
+    public constructor() { }
+
+    public onSubmit(): void {
+        this.submit.emit({
+            serverUrl: this.serverUrl,
+            email: this.email,
+            password: this.password
+        });
+    }
+
+    public onAbort(): void {
+        this.abort.emit();
+    }
 }

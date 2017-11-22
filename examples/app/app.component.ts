@@ -16,7 +16,7 @@ export class AppComponent {
   public theme: Theme;
   public activeMediaQuery: boolean;
   public mode: string;
-  public app: string = 'Entry';
+  public app: string = 'Buttons';
   public url: string;
 
   public themesLocalNames: any = {
@@ -39,7 +39,7 @@ export class AppComponent {
   
   public list: any[] = [
     {
-      name: 'Signin', id: 'signin', route: 'signin'
+      name: 'signin', id: 'signin', route: 'signin-example'
     }
   ];
   @ViewChild('sidenav') sidenav: MatSidenav;

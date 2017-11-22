@@ -17,8 +17,8 @@ import { SigninExampleModule } from './signin-example/signin-example.module';
 import { SigninExampleComponent } from './signin-example/signin-example.component';
 
 const appRoutes: Routes = [
-  { path: 'drilldown_list', component: SigninExampleComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'drilldown_list' }
+  { path: 'signin-examples', component: SigninExampleComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'signin-examples' }
 ];
 
 @NgModule({
