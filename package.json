@@ -52,6 +52,7 @@
     "tslint": "~5.3.2",
     "typescript": "~2.3.3",
     "webpack": "^3.6.0",
+    "pip-webui2-layouts": "git+https://github.com/pip-webui2/pip-webui2-layouts.git",
     "pip-webui2-themes": "git+https://github.com/pip-webui2/pip-webui2-themes.git"
   }
 }

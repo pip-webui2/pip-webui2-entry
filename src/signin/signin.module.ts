@@ -16,11 +16,15 @@ import { MatInputModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material';
 import { MatProgressBarModule } from '@angular/material';
 
+import { PipCardLayoutModule, PipMediaModule, PipShadowModule } from 'pip-webui2-layouts';
+
 @NgModule({
   declarations: [
     PipSigninComponent
   ],
   imports: [
+    PipCardLayoutModule, PipMediaModule, PipShadowModule,
+    
     BrowserModule,
     FlexLayoutModule,
 

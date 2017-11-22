@@ -1,3 +1,10 @@
+<pip-shadow visible="true" attachmentSide="top"></pip-shadow>
+<pip-shadow visible="true" attachmentSide="left"></pip-shadow>
+<pip-shadow visible="true" attachmentSide="right"></pip-shadow>
+<pip-card-layout fxFlex="fill" [transparent]="isTransparent" >
+  <mat-card >
+    <h4>Sign in</h4>
+    
 <form #_signinForm="ngForm" fxLayout="column" fxLayoutGap="16px">
     <div fxLayout="column" fxLayoutGap="8px">
       <mat-input-container>
@@ -7,8 +14,7 @@
         <mat-error *ngIf="_serverUrl.errors?.pattern">Server URL is invalid</mat-error>
       </mat-input-container>
       <mat-input-container>
-        <input matInput placeholder="Email" type="email" id="email" name="email" [(ngModel)]="email" #_email="ngModel" required pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$"
-        />
+        <input matInput placeholder="Email" type="email" id="email" name="email" [(ngModel)]="email" #_email="ngModel" required pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$"/>
         <mat-error *ngIf="_email.errors?.required">Email is required</mat-error>
         <mat-error *ngIf="_email.errors?.pattern">Email is invalid</mat-error>
       </mat-input-container>
@@ -26,3 +32,5 @@
       </div>
     </div>
   </form>
+  </mat-card>
+</pip-card-layout>
