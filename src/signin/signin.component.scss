@@ -1,5 +1,12 @@
 
-
+:host {
+  display: block;
+  position: relative;
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
 @import '~@angular/material/theming';
 @import "../../node_modules/pip-webui2-themes/src/styles.scss";
 

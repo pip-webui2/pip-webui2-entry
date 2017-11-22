@@ -23,14 +23,9 @@
     <div fxLayout="row" style="height: calc(100% - 68px);">
         <examples-list *ngIf="!activeMediaQuery" class="mat-elevation-z6 nav" [list]="list" [selectedItemIndex]="listIndex" (selectedItemIndexChange)="onListItemIndexChanged($event)">
         </examples-list>
-        <div fxFlex="grow" 
+        <div fxFlex="grow" fxLayout="column"
              style="width: calc(100% - 300px); overflow: auto">
-            <mat-toolbar color="primary" *ngIf="list[listIndex]">
-                <span fxLayout="row" fxLayoutAlign="start center" fxFlex="grow">
-                    {{list[listIndex].name}}
-                </span>
-            </mat-toolbar>
-            <div class="router">
+            <div class="router" fxFlex="grow" fxLayout="column">
                 <router-outlet></router-outlet>
             </div>
         </div>

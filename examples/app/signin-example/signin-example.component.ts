@@ -4,7 +4,8 @@ import { Observable } from 'rxjs/Observable';
 
 @Component({
 	selector: 'signin-example',
-	templateUrl: 'signin-example.component.html'
+	templateUrl: 'signin-example.component.html',
+	styleUrls: ['signin-example.component.scss']
 })
 
 export class SigninExampleComponent implements OnInit {
