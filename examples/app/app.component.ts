@@ -16,7 +16,7 @@ export class AppComponent {
   public theme: Theme;
   public activeMediaQuery: boolean;
   public mode: string;
-  public app: string = 'Buttons';
+  public app: string = 'Entry';
   public url: string;
 
   public themesLocalNames: any = {

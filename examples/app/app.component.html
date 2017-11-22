@@ -1,11 +1,11 @@
-<mat-sidenav-container class="content" *ngIf="list">
-    <mat-sidenav #sidenav>
+<pip-root>
+    <pip-sidenav-floating style="height: 100%">
         <examples-list [list]="list" [selectedItemIndex]="listIndex" (selectedItemIndexChange)="onListItemIndexChanged($event);">
         </examples-list>
-    </mat-sidenav>
-
-    <mat-toolbar color="primary" class="mat-elevation-z6 example-appbar">
-        <span fxLayout="row" fxLayoutAlign="start center" fxFlex="grow">
+</pip-sidenav-floating>
+<pip-root-content>
+    <pip-appbar>
+      <span fxLayout="row" fxLayoutAlign="start center" fxFlex="grow">
             <button mat-icon-button *ngIf="activeMediaQuery" >
                 <mat-icon (click)="sidenav.open()">reorder</mat-icon>
             </button>
@@ -18,17 +18,15 @@
             </mat-select>
         </mat-form-field>
         </span>
-    </mat-toolbar>
-
-    <div fxLayout="row" style="height: calc(100% - 68px);">
+    </pip-appbar>
+    <pip-main fxFlex="grow">
+        <pip-sidenav-fixed style="height: 100%">
         <examples-list *ngIf="!activeMediaQuery" class="mat-elevation-z6 nav" [list]="list" [selectedItemIndex]="listIndex" (selectedItemIndexChange)="onListItemIndexChanged($event)">
         </examples-list>
-        <div fxFlex="grow" fxLayout="column"
-             style="width: calc(100% - 300px); overflow: auto">
-            <div class="router" fxFlex="grow" fxLayout="column">
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-    </div>
-
-</mat-sidenav-container>
+        </pip-sidenav-fixed>
+        <pip-main-content>
+            <router-outlet></router-outlet>
+          </pip-main-content>
+    </pip-main>
+</pip-root-content>
+</pip-root>

@@ -1,36 +1,36 @@
 <pip-shadow visible="true" attachmentSide="top"></pip-shadow>
 <pip-shadow visible="true" attachmentSide="left"></pip-shadow>
 <pip-shadow visible="true" attachmentSide="right"></pip-shadow>
-<pip-card-layout fxFlex="fill" [transparent]="isTransparent" >
-  <mat-card >
-    <h4>Sign in</h4>
-    
-<form #_signinForm="ngForm" fxLayout="column" fxLayoutGap="16px">
-    <div fxLayout="column" fxLayoutGap="8px">
-      <mat-input-container>
-        <input matInput placeholder="Server URL" type="url" id="serverUrl" name="serverUrl" [(ngModel)]="serverUrl" #_serverUrl="ngModel"
-          required pattern="^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})$" />
-        <mat-error *ngIf="_serverUrl.errors?.required">Server URL is required</mat-error>
-        <mat-error *ngIf="_serverUrl.errors?.pattern">Server URL is invalid</mat-error>
-      </mat-input-container>
-      <mat-input-container>
-        <input matInput placeholder="Email" type="email" id="email" name="email" [(ngModel)]="email" #_email="ngModel" required pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$"/>
-        <mat-error *ngIf="_email.errors?.required">Email is required</mat-error>
-        <mat-error *ngIf="_email.errors?.pattern">Email is invalid</mat-error>
-      </mat-input-container>
-      <mat-input-container>
-        <input matInput placeholder="Password" type="password" id="password" name="password" [(ngModel)]="password" #_password="ngModel"
-          required pattern="^\w{6,20}$" />
-        <mat-error *ngIf="_password.errors?.required">Password is required</mat-error>
-        <mat-error *ngIf="_password.errors?.pattern">Must be a list 6 symbols</mat-error>
-      </mat-input-container>
+<pip-card-layout fxFlex="fill" [transparent]="isTransparent">
+    <mat-card>
+        <h4>Sign in</h4>
 
-      <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
-        <button mat-raised-button *ngIf="!loading" type="button" color="primaty" [disabled]="!_signinForm.form.valid" 
-          (click)="onSubmit()">SIGNIN</button>
-        <button mat-raised-button *ngIf="loading" type="button" color="accent" (click)="onAbort()">ABORT</button>
-      </div>
-    </div>
-  </form>
-  </mat-card>
+        <form #_signinForm="ngForm" fxLayout="column" fxLayoutGap="16px">
+            <div fxLayout="column" fxLayoutGap="8px">
+                <mat-input-container>
+                    <input matInput placeholder="Server URL" type="url" id="serverUrl" name="serverUrl" [(ngModel)]="serverUrl" #_serverUrl="ngModel"
+                        required pattern="^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})$" />
+                    <mat-error *ngIf="_serverUrl.errors?.required">Server URL is required</mat-error>
+                    <mat-error *ngIf="_serverUrl.errors?.pattern">Server URL is invalid</mat-error>
+                </mat-input-container>
+                <mat-input-container>
+                    <input matInput placeholder="Email" type="email" id="email" name="email" [(ngModel)]="email" #_email="ngModel" required pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$"
+                    />
+                    <mat-error *ngIf="_email.errors?.required">Email is required</mat-error>
+                    <mat-error *ngIf="_email.errors?.pattern">Email is invalid</mat-error>
+                </mat-input-container>
+                <mat-input-container>
+                    <input matInput placeholder="Password" type="password" id="password" name="password" [(ngModel)]="password" #_password="ngModel"
+                        required pattern="^\w{6,20}$" />
+                    <mat-error *ngIf="_password.errors?.required">Password is required</mat-error>
+                    <mat-error *ngIf="_password.errors?.pattern">Must be a list 6 symbols</mat-error>
+                </mat-input-container>
+
+                <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
+                    <button mat-raised-button *ngIf="!loading" type="button" color="primaty" [disabled]="!_signinForm.form.valid" (click)="onSubmit()">SIGNIN</button>
+                    <button mat-raised-button *ngIf="loading" type="button" color="accent" (click)="onAbort()">ABORT</button>
+                </div>
+            </div>
+        </form>
+    </mat-card>
 </pip-card-layout>

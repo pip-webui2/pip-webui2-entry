@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router'
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CustomBreakPointsProvider } from './custom-breakpoints';
@@ -11,6 +11,9 @@ import { PipThemesModule } from 'pip-webui2-themes';
 
 import { ExampleListModule } from './examples-list/examples-list.module';
 import { AppComponent } from './app.component';
+import {PipAppbarModule,
+  PipSidenavModule, PipMainModule,
+  PipRootModule, PipRightnavModule} from 'pip-webui2-layouts';
 
 import { SigninExampleModule } from './signin-example/signin-example.module';
 
@@ -42,10 +45,17 @@ const appRoutes: Routes = [
     ExampleListModule,
     SigninExampleModule,
 
+    PipAppbarModule,
+    PipSidenavModule, 
+    PipMainModule,
+    PipRootModule,
+    PipRightnavModule,
+
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],
   providers: [CustomBreakPointsProvider],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
  
