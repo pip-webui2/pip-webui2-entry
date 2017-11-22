@@ -3,19 +3,19 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { PipDrilldownListComponent } from './drilldown-list.component';
+import { PipSigninComponent } from './signin.component';
 
 @NgModule({
   declarations: [
-    PipDrilldownListComponent
+    PipSigninComponent
   ],
   imports: [
     BrowserModule,
     FlexLayoutModule
   ],
   exports: [
-    PipDrilldownListComponent
+    PipSigninComponent
   ],
   providers: [],
 })
-export class PipDrilldownListModule { }
+export class PipSigninModule { }
