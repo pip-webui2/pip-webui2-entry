@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { Routes, RouterModule} from '@angular/router'
+import { Routes, RouterModule } from '@angular/router'
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CustomBreakPointsProvider } from './custom-breakpoints';
-import { MatToolbarModule, MatSelectModule, MatSidenavModule, MatIconModule,MatButtonModule } from '@angular/material';
+import { MatToolbarModule, MatSelectModule, MatSidenavModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { PipThemesModule } from 'pip-webui2-themes';
@@ -11,9 +11,11 @@ import { PipThemesModule } from 'pip-webui2-themes';
 
 import { ExampleListModule } from './examples-list/examples-list.module';
 import { AppComponent } from './app.component';
-import {PipAppbarModule,
+import {
+  PipAppbarModule,
   PipSidenavModule, PipMainLayoutModule,
-  PipRootLayoutModule, PipRightnavModule} from 'pip-webui2-layouts';
+  PipRootLayoutModule, PipRightnavModule
+} from 'pip-webui2-layouts';
 
 import { SigninExampleModule } from './signin-example/signin-example.module';
 
@@ -39,14 +41,14 @@ const appRoutes: Routes = [
     MatIconModule,
     MatSidenavModule,
     MatButtonModule,
-    
+
     PipThemesModule,
 
     ExampleListModule,
     SigninExampleModule,
 
     PipAppbarModule,
-    PipSidenavModule, 
+    PipSidenavModule,
     PipMainLayoutModule,
     PipRootLayoutModule,
     PipRightnavModule,
@@ -58,4 +60,3 @@ const appRoutes: Routes = [
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
- 

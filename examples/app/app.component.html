@@ -1,4 +1,4 @@
-<pip-root>
+<pip-root-layout>
     <pip-sidenav-floating style="height: 100%">
         <examples-list [list]="list" [selectedItemIndex]="listIndex" (selectedItemIndexChange)="onListItemIndexChanged($event);">
         </examples-list>
@@ -19,7 +19,7 @@
             </mat-form-field>
             </span>
         </pip-appbar>
-        <pip-main fxFlex="grow">
+        <pip-main-layout fxFlex="grow">
             <pip-sidenav-fixed style="height: 100%">
                 <examples-list *ngIf="!activeMediaQuery" class="mat-elevation-z6 nav" [list]="list" [selectedItemIndex]="listIndex" (selectedItemIndexChange)="onListItemIndexChanged($event)">
                 </examples-list>
@@ -27,6 +27,6 @@
             <pip-main-content>
                 <router-outlet></router-outlet>
             </pip-main-content>
-        </pip-main>
+        </pip-main-layout>
     </pip-root-content>
-</pip-root>
+</ppip-root-layout>
