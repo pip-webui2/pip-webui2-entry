@@ -12,8 +12,8 @@ import { PipThemesModule } from 'pip-webui2-themes';
 import { ExampleListModule } from './examples-list/examples-list.module';
 import { AppComponent } from './app.component';
 import {PipAppbarModule,
-  PipSidenavModule, PipMainModule,
-  PipRootModule, PipRightnavModule} from 'pip-webui2-layouts';
+  PipSidenavModule, PipMainLayoutModule,
+  PipRootLayoutModule, PipRightnavModule} from 'pip-webui2-layouts';
 
 import { SigninExampleModule } from './signin-example/signin-example.module';
 
@@ -47,8 +47,8 @@ const appRoutes: Routes = [
 
     PipAppbarModule,
     PipSidenavModule, 
-    PipMainModule,
-    PipRootModule,
+    PipMainLayoutModule,
+    PipRootLayoutModule,
     PipRightnavModule,
 
     RouterModule.forRoot(appRoutes, { useHash: true })
