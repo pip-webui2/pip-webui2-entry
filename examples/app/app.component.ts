@@ -41,6 +41,8 @@ export class AppComponent {
   public list: any[] = [
     {
       name: 'signin', id: 'signin', route: 'signin-example'
+    }, {
+      name: 'signup', id: 'signup', route: 'signup-example'
     }
   ];
 

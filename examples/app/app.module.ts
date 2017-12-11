@@ -18,12 +18,15 @@ import {
 } from 'pip-webui2-layouts';
 
 import { SigninExampleModule } from './signin-example/signin-example.module';
-
 import { SigninExampleComponent } from './signin-example/signin-example.component';
 
+import { SignupExampleModule} from './signup-example/signup-example.module';
+import { SignupExampleComponent } from './signup-example/signup-example.component';
+
 const appRoutes: Routes = [
-  { path: 'signin-examples', component: SigninExampleComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'signin-examples' }
+  { path: 'signin-example', component: SigninExampleComponent },
+  { path: 'signup-example', component: SignupExampleComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'signin-example' }
 ];
 
 @NgModule({
@@ -46,6 +49,7 @@ const appRoutes: Routes = [
 
     ExampleListModule,
     SigninExampleModule,
+    SignupExampleModule,
 
     PipAppbarModule,
     PipSidenavModule,
