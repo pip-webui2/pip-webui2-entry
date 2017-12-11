@@ -7,7 +7,7 @@
 
         <form #_signinForm="ngForm" fxLayout="column" fxLayoutGap="16px">
             <div fxLayout="column" fxLayoutGap="8px">
-                <mat-input-container>
+                <mat-input-container *ngIf="showUrl">
                     <input matInput [placeholder]="serverUrlName" type="url" id="serverUrl" name="serverUrl" [(ngModel)]="serverUrl" #_serverUrl="ngModel"
                         required [pattern]="serverUrlPattern" />
                     <mat-error *ngIf="_serverUrl.errors?.required">{{serverUrlRequired}}</mat-error>

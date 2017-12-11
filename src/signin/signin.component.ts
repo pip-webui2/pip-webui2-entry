@@ -10,6 +10,7 @@ export class PipSigninComponent {
 
     @Input() title: string = 'Sign in';
 
+    @Input() showUrl: boolean = true;
     @Input() serverUrlName: string = 'Server URL';
     @Input() serverUrl: string;
     @Input() serverUrlPattern: string = '^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})$';
