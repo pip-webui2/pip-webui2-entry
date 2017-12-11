@@ -8,11 +8,29 @@ import {  Component, Input, Output, EventEmitter, ChangeDetectionStrategy  } fro
 })
 export class PipSigninComponent {
 
-	@Input() serverUrl: string;
+    @Input() title: string = 'Sign in';
+
+    @Input() serverUrlName: string = 'Server URL';
+    @Input() serverUrl: string;
+    @Input() serverUrlPattern: string = '^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})$';
+    @Input() serverUrlRequired: string = 'Server URL is required';
+    @Input() serverUrlInvalid: string = 'Server URL is invalid';
+
+    @Input() emailName: string = 'Email';
     @Input() email: string;
+    @Input() emailPattern: string = '^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$';
+    @Input() emailRequired: string = 'Email is required';
+    @Input() emailInvalid: string = 'Email URL is invalid';
+
+    @Input() passwordName: string = 'Password';
     @Input() password: string;
+    @Input() passwordRequired: string = 'Password is required';
+    @Input() passwordInvalid: string = 'Must be a list 6 symbols';
+
     @Input() error: string;
     @Input() loading: boolean;
+    @Input() signinName: string = 'Signin';
+    @Input() abortName: string = 'Abort';
 
     @Output() submit = new EventEmitter();
     @Output() abort = new EventEmitter();
