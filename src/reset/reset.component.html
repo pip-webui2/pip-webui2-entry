@@ -33,10 +33,14 @@
                     <mat-error *ngIf="_password.errors?.pattern">{{passwordInvalid}}</mat-error>
                 </mat-input-container>
 
-                <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
-                    <button mat-raised-button *ngIf="!loading" type="button" fxFlex="100" color="accent" [disabled]="!_resetForm.form.valid"
+                <div class="pip-footer" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
+                        <div fxFlex></div>
+                    <button mat-button *ngIf="!loading" type="button"
+                        (click)="onCancel()">{{cancelName}}</button>
+                    
+                    <button mat-button *ngIf="!loading" type="button"  color="accent" [disabled]="!_resetForm.form.valid"
                         (click)="onSubmit()">{{resetName}}</button>
-                    <button mat-raised-button *ngIf="loading" type="button" fxFlex="100" color="warm" (click)="onAbort()"> {{abortName}} </button>
+                    <button mat-button *ngIf="loading" type="button" color="warm" (click)="onAbort()"> {{abortName}} </button>
                 </div>
             </div>
         </form>

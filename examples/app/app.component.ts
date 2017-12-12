@@ -43,8 +43,7 @@ export class AppComponent {
       name: 'signin', id: 'signin', route: 'signin-example'
     }, {
       name: 'signup', id: 'signup', route: 'signup-example'
-    }
-    , {
+    }, {
       name: 'reset', id: 'reset', route: 'reset-example'
     }
   ];

@@ -35,11 +35,13 @@ export class PipResetComponent {
 
     @Input() error: string;
     @Input() loading: boolean;
+    @Input() cancelName: string = 'Cancel';
     @Input() resetName: string = 'Reset';
     @Input() abortName: string = 'Abort';
 
     @Output() submit = new EventEmitter();
     @Output() abort = new EventEmitter();
+    @Output() cancel = new EventEmitter();
 
     public constructor() { }
 
@@ -53,5 +55,9 @@ export class PipResetComponent {
 
     public onAbort(): void {
         this.abort.emit();
+    }
+
+    public onCancel(): void {
+        this.cancel.emit();
     }
 }
