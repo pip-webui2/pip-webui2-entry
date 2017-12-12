@@ -44,6 +44,9 @@ export class AppComponent {
     }, {
       name: 'signup', id: 'signup', route: 'signup-example'
     }
+    , {
+      name: 'reset', id: 'reset', route: 'reset-example'
+    }
   ];
 
   public constructor(
