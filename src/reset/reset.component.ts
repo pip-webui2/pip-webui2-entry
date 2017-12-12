@@ -9,6 +9,7 @@ import {  Component, Input, Output, EventEmitter, ChangeDetectionStrategy  } fro
 export class PipResetComponent {
 
     @Input() title: string = 'Reset';
+    @Input() subtitle: string = 'Enter the email address together with the reset code you received in email from PipLife. Remember the code is only active for 24 hours.';
 
     @Input() showUrl: boolean = true;
     @Input() serverUrlName: string = 'Server URL';
@@ -22,6 +23,10 @@ export class PipResetComponent {
     @Input() emailPattern: string = '^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$';
     @Input() emailRequired: string = 'Email is required';
     @Input() emailInvalid: string = 'Email URL is invalid';
+
+    @Input() codeName: string = 'Reset code';
+    @Input() code: string;
+    @Input() codeRequired: string = 'Code is required';
 
     @Input() passwordName: string = 'Password';
     @Input() password: string;
