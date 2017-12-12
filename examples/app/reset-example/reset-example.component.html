@@ -1,0 +1,7 @@
+
+<pip-reset
+[serverUrl]="serverUrl$ | async" 
+[email]="email$ | async" [error]="error$ | async"
+[loading]="loading$ | async"
+[password]="password$ | async"
+(submit)="onSubmit($event)" (abort)="onAbort()" ></pip-reset>

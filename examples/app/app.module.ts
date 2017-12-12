@@ -23,9 +23,13 @@ import { SigninExampleComponent } from './signin-example/signin-example.componen
 import { SignupExampleModule} from './signup-example/signup-example.module';
 import { SignupExampleComponent } from './signup-example/signup-example.component';
 
+import { ResetExampleModule} from './reset-example/reset-example.module';
+import { ResetExampleComponent } from './reset-example/reset-example.component';
+
 const appRoutes: Routes = [
   { path: 'signin-example', component: SigninExampleComponent },
   { path: 'signup-example', component: SignupExampleComponent },
+  { path: 'reset-example', component: ResetExampleComponent },
   { path: '', pathMatch: 'full', redirectTo: 'signin-example' }
 ];
 
@@ -50,6 +54,7 @@ const appRoutes: Routes = [
     ExampleListModule,
     SigninExampleModule,
     SignupExampleModule,
+    ResetExampleModule,
 
     PipAppbarModule,
     PipSidenavModule,
