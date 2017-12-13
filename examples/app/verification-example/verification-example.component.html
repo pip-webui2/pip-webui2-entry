@@ -1,3 +1,9 @@
-<pip-verification [code]="code$ | async" [error]="error$ | async" [loading]="loading$ | async" [subtitle]="subtitle" (submit)="onSubmit($event)"
+<pip-verification 
+[code]="code$ | async" 
+[error]="error$ | async" 
+[loading]="loading$ | async" 
+[subtitle]="subtitle" 
+[resend]="resend"
+(submit)="onSubmit($event)"
     (abort)="onAbort()">
 </pip-verification>

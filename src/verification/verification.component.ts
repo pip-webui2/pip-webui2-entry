@@ -29,7 +29,8 @@ export class PipVerificationComponent {
     @Input() cancelName: string = 'Cancel';
     @Input() verificationName: string = 'Verification';
     @Input() abortName: string = 'Abort';
-
+    @Input() resend: string;
+    
     @Output() submit = new EventEmitter();
     @Output() abort = new EventEmitter();
     @Output() cancel = new EventEmitter();
