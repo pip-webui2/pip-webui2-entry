@@ -47,6 +47,8 @@ export class AppComponent {
       name: 'reset', id: 'reset', route: 'reset-example'
     }, {
       name: 'recovery', id: 'recovery', route: 'recovery-example'
+    }, {
+      name: 'verification', id: 'verification', route: 'verification-example'
     }
   ];
 
