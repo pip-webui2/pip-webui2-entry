@@ -1,0 +1,6 @@
+
+<pip-recovery
+[serverUrl]="serverUrl$ | async" 
+[error]="error$ | async"
+[loading]="loading$ | async"
+(submit)="onSubmit($event)" (abort)="onAbort()" ></pip-recovery>

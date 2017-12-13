@@ -23,9 +23,9 @@
                     <mat-error *ngIf="_email.errors?.pattern">{{emailInvalid}}</mat-error>
                 </mat-input-container>
                 <mat-input-container>
-                        <input matInput [placeholder]="codeName" type="text" id="code" name="code" [(ngModel)]="code" #_code="ngModel" required />
-                        <mat-error *ngIf="_code.errors?.required">{{codeRequired}}</mat-error>
-                    </mat-input-container>
+                    <input matInput [placeholder]="codeName" type="text" id="code" name="code" [(ngModel)]="code" #_code="ngModel" required />
+                    <mat-error *ngIf="_code.errors?.required">{{codeRequired}}</mat-error>
+                </mat-input-container>
                 <mat-input-container>
                     <input matInput [placeholder]="passwordName" type="password" id="password" name="password" [(ngModel)]="password" #_password="ngModel"
                         required pattern="^\w{6,20}$" />
@@ -34,12 +34,9 @@
                 </mat-input-container>
 
                 <div class="pip-footer" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
-                        <div fxFlex></div>
-                    <button mat-button *ngIf="!loading" type="button"
-                        (click)="onCancel()">{{cancelName}}</button>
-                    
-                    <button mat-button *ngIf="!loading" type="button"  color="accent" [disabled]="!_resetForm.form.valid"
-                        (click)="onSubmit()">{{resetName}}</button>
+                    <div fxFlex></div>
+                    <button mat-button *ngIf="!loading" type="button" (click)="onCancel()">{{cancelName}}</button>
+                    <button mat-button *ngIf="!loading" type="button" color="accent" [disabled]="!_resetForm.form.valid" (click)="onSubmit()">{{resetName}}</button>
                     <button mat-button *ngIf="loading" type="button" color="warm" (click)="onAbort()"> {{abortName}} </button>
                 </div>
             </div>

@@ -26,10 +26,14 @@ import { SignupExampleComponent } from './signup-example/signup-example.componen
 import { ResetExampleModule} from './reset-example/reset-example.module';
 import { ResetExampleComponent } from './reset-example/reset-example.component';
 
+import { RecoveryExampleModule} from './recovery-example/recovery-example.module';
+import { RecoveryExampleComponent } from './recovery-example/recovery-example.component';
+
 const appRoutes: Routes = [
   { path: 'signin-example', component: SigninExampleComponent },
   { path: 'signup-example', component: SignupExampleComponent },
   { path: 'reset-example', component: ResetExampleComponent },
+  { path: 'recovery-example', component: RecoveryExampleComponent },
   { path: '', pathMatch: 'full', redirectTo: 'signin-example' }
 ];
 
@@ -55,6 +59,7 @@ const appRoutes: Routes = [
     SigninExampleModule,
     SignupExampleModule,
     ResetExampleModule,
+    RecoveryExampleModule,
 
     PipAppbarModule,
     PipSidenavModule,
