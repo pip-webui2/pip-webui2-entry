@@ -11,6 +11,7 @@ export class PipResetComponent {
     @Input() title: string = 'Reset';
     @Input() subtitle: string = 'Enter the email address together with the reset code you received in email from PipLife. Remember the code is only active for 24 hours.';
 
+    @Input() changeServerUrlName: string = 'Change server';
     @Input() showUrl: boolean = true;
     @Input() serverUrlName: string = 'Server URL';
     @Input() serverUrl: string;
