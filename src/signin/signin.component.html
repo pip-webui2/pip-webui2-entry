@@ -37,7 +37,7 @@
                             (click)="onSubmit()">{{signinName}}</button>
                         <button mat-raised-button *ngIf="loading" type="button" fxFlex="100" color="warm" (click)="onAbort()"> {{abortName}} </button>
                     </div>
-                    <p [innerHtml]="signupLink" *ngIf="signupLink"></p>
+                    <p [innerHtml]="signupLink" *ngIf="signupLink" class="pip-footer-text"></p>
                 </div>
             </form>
         </mat-card-content>

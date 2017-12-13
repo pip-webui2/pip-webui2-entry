@@ -42,7 +42,7 @@
                         <button mat-raised-button *ngIf="loading" type="button" fxFlex="100" color="warm" (click)="onAbort()"> {{abortName}} </button>
                     </div>
 
-                    <p [innerHtml]="signinLink" *ngIf="signinLink"></p>
+                    <p [innerHtml]="signinLink" *ngIf="signinLink" class="pip-footer-text"></p>
                 </div>
             </form>
         </mat-card-content>
