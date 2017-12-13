@@ -10,6 +10,7 @@ export class PipSigninComponent {
 
     @Input() title: string = 'Sign in';
 
+    @Input() changeServerUrlName: string = 'Change server';
     @Input() showUrl: boolean = true;
     @Input() serverUrlName: string = 'Server URL';
     @Input() serverUrl: string;
