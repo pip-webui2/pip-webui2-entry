@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 
 import { Observable } from 'rxjs/Observable';
 
@@ -15,6 +16,9 @@ export class RecoveryExampleComponent implements OnInit {
 	public email$: Observable<string>;
 	public password: Observable<string>;
 	public loading: Observable<boolean>;
+	constructor(private router:Router) {
+
+	}
 	public ngOnInit() {
 		//this.serverUrl$ = new Observable<string>();
 		//this.email$ = new Observable<string>();
@@ -24,6 +28,8 @@ export class RecoveryExampleComponent implements OnInit {
 
 	public onSubmit(data): void {
 		console.log("submit", data);
+
+		this.router.navigateByUrl('reset-example');
 	}
 
 	public onAbort(): void {
