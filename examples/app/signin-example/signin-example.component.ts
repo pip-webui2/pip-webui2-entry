@@ -16,7 +16,7 @@ export class SigninExampleComponent implements OnInit {
 	public password: Observable<string>;
 	public loading: Observable<boolean>;
 	public forgotLink: string = '/#/recovery-example';
-	public signupLink: string = 'Not a member? <a href="/#/signup-example">Sign up</a>';
+	public signupLink: string = 'Not a member? <a href="/#/signup-example">Sign up here</a>';
 	public ngOnInit() {
 		//this.serverUrl$ = new Observable<string>();
 		//this.email$ = new Observable<string>();

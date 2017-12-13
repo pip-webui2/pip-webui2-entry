@@ -32,7 +32,7 @@ export class PipSigninComponent {
     @Input() forgotTitle: string = 'Forgot password?';
     @Input() forgotLink: string = '';
 
-    @Input() signupLink: string = '';
+    @Input() signupLink: string;
 
     @Input() error: string;
     @Input() loading: boolean;

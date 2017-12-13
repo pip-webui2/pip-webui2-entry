@@ -32,12 +32,12 @@
 
                     <a [href]="forgotLink" *ngIf="forgotTitle" class="pip-link">{{forgotTitle}}</a>
 
-                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="pip-footer">
                         <button mat-raised-button *ngIf="!loading" type="button" fxFlex="100" color="accent" [disabled]="!_signinForm.form.valid"
                             (click)="onSubmit()">{{signinName}}</button>
                         <button mat-raised-button *ngIf="loading" type="button" fxFlex="100" color="warm" (click)="onAbort()"> {{abortName}} </button>
                     </div>
-                    <p [innerHtml]="signupLink"></p>
+                    <p [innerHtml]="signupLink" *ngIf="signupLink"></p>
                 </div>
             </form>
         </mat-card-content>
