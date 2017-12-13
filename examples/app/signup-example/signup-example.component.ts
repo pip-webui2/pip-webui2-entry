@@ -15,6 +15,8 @@ export class SignupExampleComponent implements OnInit {
 	public email$: Observable<string>;
 	public password: Observable<string>;
 	public loading: Observable<boolean>;
+	public privacyLink: string = "By clicking Sign up, you agree to the <a href='/#/privacy-example'> privacy statement </a> and <a href='/#/service-example'> services agreement </a>";
+	public signinLink: string = "Do you have an account? <a href='/#/signin-example'>Sign up here</a>";
 	public ngOnInit() {
 		//this.serverUrl$ = new Observable<string>();
 		//this.email$ = new Observable<string>();
