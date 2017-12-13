@@ -8,9 +8,10 @@ import {  Component, Input, Output, EventEmitter, ChangeDetectionStrategy  } fro
 })
 export class PipRecoveryComponent {
 
-    @Input() title: string = 'Recovery';
-    @Input() subtitle: string = 'Recovery subtitle';
+    @Input() title: string = 'Forgot Password?';
+    @Input() subtitle: string = "Enter the email address you used when you joined and we'll send you instructions to reset your password. <br> <br> For security reasons, we do NOT store your password. So rest assured that we will never send your password via email.'";
 
+    @Input() changeServerUrlName: string = 'Change server';
     @Input() showUrl: boolean = true;
     @Input() serverUrlName: string = 'Server URL';
     @Input() serverUrl: string;
