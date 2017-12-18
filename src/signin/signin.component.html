@@ -39,7 +39,7 @@
                     <div fxLayout="row" fxLayoutAlign="center center" class="pip-footer">
                         <button mat-raised-button *ngIf="!loading" type="button" fxFlex="100" color="accent" [disabled]="!_signinForm.form.valid"
                             (click)="onSubmit()">{{signinName}}</button>
-                        <button mat-raised-button *ngIf="loading" type="button" fxFlex="100" color="warm" (click)="onAbort()"> {{abortName}} </button>
+                        <button mat-raised-button *ngIf="loading" type="button" fxFlex="100" color="warn" (click)="onAbort()"> {{abortName}} </button>
                     </div>
                     <p [innerHtml]="signupLink" *ngIf="signupLink" class="pip-footer-text"></p>
                 </div>
