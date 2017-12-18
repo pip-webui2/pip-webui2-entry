@@ -34,7 +34,7 @@ export class PipSigninComponent {
 
     @Input() signupLink: string;
 
-    @Input() error: string;
+    @Input() error: any;
     @Input() loading: boolean;
     @Input() signinName: string = 'Signin';
     @Input() abortName: string = 'Abort';

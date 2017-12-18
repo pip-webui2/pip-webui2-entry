@@ -7,6 +7,9 @@
             <h2 class="pip-title">{{title}}</h2>
             <h4 class="pip-subtitle" [innerHTML]="subtitle" *ngIf="subtitle"></h4>
 
+            <p *ngIf="error" class="pip-error">
+                {{error.message || error}}
+            </p>
             <form #_signinForm="ngForm" fxLayout="column" fxLayoutGap="16px">
                 <div fxLayout="column" fxLayoutGap="8px">
 
