@@ -17,11 +17,6 @@
 // **Be sure that you only ever include this mixin once!**
 @include mat-core();
 
-
-.pip-link {
-  //color: #fff !important;
-}
-
 .pip-subtitle {
   opacity: 0.54;
   font-weight: 400;
@@ -30,6 +25,7 @@
 .pip-title {
   font-weight: 500;
   font-size: 20px;
+  margin-top: 0px;
 }
 
 .pip-footer {
@@ -41,6 +37,97 @@
   margin-bottom: 0px;
 }
 
-.pip-error {
-  color: red;
+.pip-loading {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 1px;
+}
+
+.pip-server {}
+
+@mixin error-mixin($theme) {
+  $warn: map-get($theme, warn);
+  .pip-error {
+      color: mat-color($warn) !important;
+  }
+}
+
+@mixin link-mixin($theme) {
+  $primary: map-get($theme, primary);
+  .pip-link {
+      color: mat-color($primary) !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+  }
+}
+
+.unicorn-dark-theme {
+  @include error-mixin($dark-theme);
+  @include link-mixin($dark-theme);
+}
+
+.candy-theme {
+  @include error-mixin($candy-app-theme);
+  @include link-mixin($dark-theme);
+}
+
+.pip-blue-theme {
+  @include error-mixin($pip-blue-theme);
+  @include link-mixin($dark-theme);
+}
+
+.pip-grey-theme {
+  @include error-mixin($pip-grey-theme);
+  @include link-mixin($dark-theme);
+}
+
+.pip-navy-theme {
+  @include error-mixin($pip-navy-theme);
+  @include link-mixin($dark-theme);
+}
+
+.pip-amber-theme {
+  @include error-mixin($pip-amber-theme);
+  @include link-mixin($dark-theme);
+}
+
+.pip-green-theme {
+  @include error-mixin($pip-green-theme);
+  @include link-mixin($dark-theme);
+}
+
+.pip-orange-theme {
+  @include error-mixin($pip-orange-theme);
+  @include link-mixin($dark-theme);
+}
+
+.pip-pink-theme {
+  @include error-mixin($pip-pink-theme);
+  @include link-mixin($dark-theme);
+}
+
+.pip-dark-theme {
+  @include error-mixin($pip-dark-theme);
+  @include link-mixin($dark-theme);
+}
+
+.pip-black-theme {
+  @include error-mixin($pip-black-theme);
+  @include link-mixin($dark-theme);
+}
+
+.bootbarn-warm-theme {
+  @include error-mixin($bootbarn-warm-theme);
+  @include link-mixin($dark-theme);
+}
+
+.bootbarn-cool-theme {
+  @include error-mixin($bootbarn-cool-theme);
+  @include link-mixin($dark-theme);
+}
+
+.bootbarn-mono-theme {
+  @include error-mixin($bootbarn-mono-theme);
+  @include link-mixin($dark-theme);
 }
