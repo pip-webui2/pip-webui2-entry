@@ -11,7 +11,7 @@
             <p *ngIf="error" class="pip-error">
                 {{error.message || error}}
             </p>
-            <form #_signinForm="ngForm" fxLayout="column" fxLayoutGap="16px">
+            <form #_signupForm="ngForm" fxLayout="column" fxLayoutGap="16px">
                 <div fxLayout="column" fxLayoutGap="8px">
 
                     <a *ngIf="showUrl && !changeUrl" (click)="changeUrl = true" class="pip-link pip-server">{{changeServerUrlName}}</a>
@@ -41,7 +41,7 @@
                     <p [innerHtml]="privacyLink" *ngIf="privacyLink"></p>
 
                     <div fxLayout="row" fxLayoutAlign="center center" class="pip-footer">
-                        <button mat-raised-button *ngIf="!loading" type="button" fxFlex="100" color="accent" [disabled]="!_signinForm.form.valid"
+                        <button mat-raised-button *ngIf="!loading" type="button" fxFlex="100" color="accent" [disabled]="!_signupForm.form.valid"
                             (click)="onSubmit()">{{signupName}}</button>
                         <button mat-raised-button *ngIf="loading" type="button" fxFlex="100" color="warm" (click)="onAbort()"> {{abortName}} </button>
                     </div>
