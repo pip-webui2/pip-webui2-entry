@@ -50,7 +50,8 @@ export class PipResetComponent {
         this.submit.emit({
             serverUrl: this.serverUrl,
             email: this.email,
-            password: this.password
+            password: this.password,
+            code: this.code
         });
     }
 
