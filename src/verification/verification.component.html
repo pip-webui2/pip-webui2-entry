@@ -4,11 +4,16 @@
 <pip-card-layout fxFlex="fill" [transparent]="isTransparent">
     <mat-card>
         <mat-card-content>
-            <h2 class="pip-title">{{title}}</h2>
-            <h4 class="pip-subtitle" [innerHTML]="subtitle"></h4>
-
-            <form #_verificationForm="ngForm" fxLayout="column" fxLayoutGap="16px">
-                <div fxLayout="column" fxLayoutGap="8px">
+                <mat-progress-bar mode="indeterminate" class="pip-loading" *ngIf="loading"></mat-progress-bar>
+                <h2 class="pip-title">{{title}}</h2>
+                <h4 class="pip-subtitle" [innerHTML]="subtitle" *ngIf="subtitle"></h4>
+    
+                <p *ngIf="error" class="pip-error">
+                    {{error.message || error}}
+                </p>
+                <form #_verificationForm="ngForm" fxLayout="column" fxLayoutGap="16px">
+                    <div fxLayout="column" fxLayoutGap="8px">
+    
                     <mat-input-container>
                         <input matInput [placeholder]="emailName" type="email" id="email" name="email" [(ngModel)]="email" #_email="ngModel" required
                             [pattern]="emailPattern" />

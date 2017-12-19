@@ -7,15 +7,6 @@
   display: flex;
   flex-direction: column;
 }
-@import '~@angular/material/theming';
-@import "~pip-webui2-themes/src/styles.scss";
-
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// **Be sure that you only ever include this mixin once!**
-@include mat-core();
 
 .pip-subtitle {
   opacity: 0.54;
@@ -25,4 +16,21 @@
 .pip-title {
   font-weight: 500;
   font-size: 20px;
+  margin-top: 0px;
+}
+
+.pip-footer {
+  margin-top: 8px;
+  margin-bottom: 4px !important;
+}
+
+.pip-footer-text {
+  margin-bottom: 0px;
+}
+
+.pip-loading {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 1px;
 }

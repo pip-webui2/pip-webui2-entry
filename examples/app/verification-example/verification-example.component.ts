@@ -17,7 +17,7 @@ export class VerificationExampleComponent implements OnInit {
 	public code: Observable<string>;
 	public loading: Observable<boolean>;
 	public subtitle: string = "Confirm your email address using verification code"
-	public resend: string = " If you haven't received the code, press <a href='/#/resend'> resend </a> to send it again.";
+	public resend: string = " If you haven't received the code, press <a href='/#/resend' class='pip-link'> resend </a> to send it again.";
 	constructor(private router:Router) {
 
 	}

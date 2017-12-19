@@ -4,13 +4,17 @@
 <pip-card-layout fxFlex="fill" [transparent]="isTransparent">
     <mat-card>
         <mat-card-content>
+            <mat-progress-bar mode="indeterminate" class="pip-loading" *ngIf="loading"></mat-progress-bar>
             <h2 class="pip-title">{{title}}</h2>
-            <h4 class="pip-subtitle" [innerHTML]="subtitle"></h4>
+            <h4 class="pip-subtitle" [innerHTML]="subtitle" *ngIf="subtitle"></h4>
 
+            <p *ngIf="error" class="pip-error">
+                {{error.message || error}}
+            </p>
             <form #_resetForm="ngForm" fxLayout="column" fxLayoutGap="16px">
                 <div fxLayout="column" fxLayoutGap="8px">
 
-                    <a *ngIf="showUrl && !changeUrl" (click)="changeUrl = true">{{changeServerUrlName}}</a>
+                    <a *ngIf="showUrl && !changeUrl" (click)="changeUrl = true" class="pip-link pip-server">{{changeServerUrlName}}</a>
 
                     <mat-input-container *ngIf="showUrl && changeUrl">
                         <input matInput [placeholder]="serverUrlName" type="url" id="serverUrl" name="serverUrl" [(ngModel)]="serverUrl" #_serverUrl="ngModel"
@@ -41,7 +45,7 @@
             <div fxFlex></div>
             <button mat-button *ngIf="!loading" type="button" (click)="onCancel()">{{cancelName}}</button>
             <button mat-button *ngIf="!loading" type="button" color="accent" [disabled]="!_resetForm.form.valid" (click)="onSubmit()">{{resetName}}</button>
-            <button mat-button *ngIf="loading" type="button" color="warm" (click)="onAbort()"> {{abortName}} </button>
+            <button mat-button *ngIf="loading" type="button" color="warn" (click)="onAbort()"> {{abortName}} </button>
         </mat-card-actions>
     </mat-card>
 </pip-card-layout>

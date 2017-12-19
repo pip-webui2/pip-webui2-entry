@@ -6,15 +6,6 @@
   display: flex;
   flex-direction: column;
 }
-@import '~@angular/material/theming';
-@import "~pip-webui2-themes/src/styles.scss";
-
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// **Be sure that you only ever include this mixin once!**
-@include mat-core();
 
 .pip-subtitle {
   opacity: 0.54;
@@ -41,92 +32,4 @@
   width: 100%;
   left: 0;
   top: 1px;
-}
-
-.pip-server {}
-
-@mixin error-mixin($theme) {
-  $warn: map-get($theme, warn);
-  .pip-error {
-      color: mat-color($warn) !important;
-  }
-}
-
-@mixin link-mixin($theme) {
-  $primary: map-get($theme, primary);
-  .pip-link {
-      color: mat-color($primary) !important;
-      cursor: pointer !important;
-      text-decoration: none !important;
-  }
-}
-
-.unicorn-dark-theme {
-  @include error-mixin($dark-theme);
-  @include link-mixin($dark-theme);
-}
-
-.candy-theme {
-  @include error-mixin($candy-app-theme);
-  @include link-mixin($dark-theme);
-}
-
-.pip-blue-theme {
-  @include error-mixin($pip-blue-theme);
-  @include link-mixin($dark-theme);
-}
-
-.pip-grey-theme {
-  @include error-mixin($pip-grey-theme);
-  @include link-mixin($dark-theme);
-}
-
-.pip-navy-theme {
-  @include error-mixin($pip-navy-theme);
-  @include link-mixin($dark-theme);
-}
-
-.pip-amber-theme {
-  @include error-mixin($pip-amber-theme);
-  @include link-mixin($dark-theme);
-}
-
-.pip-green-theme {
-  @include error-mixin($pip-green-theme);
-  @include link-mixin($dark-theme);
-}
-
-.pip-orange-theme {
-  @include error-mixin($pip-orange-theme);
-  @include link-mixin($dark-theme);
-}
-
-.pip-pink-theme {
-  @include error-mixin($pip-pink-theme);
-  @include link-mixin($dark-theme);
-}
-
-.pip-dark-theme {
-  @include error-mixin($pip-dark-theme);
-  @include link-mixin($dark-theme);
-}
-
-.pip-black-theme {
-  @include error-mixin($pip-black-theme);
-  @include link-mixin($dark-theme);
-}
-
-.bootbarn-warm-theme {
-  @include error-mixin($bootbarn-warm-theme);
-  @include link-mixin($dark-theme);
-}
-
-.bootbarn-cool-theme {
-  @include error-mixin($bootbarn-cool-theme);
-  @include link-mixin($dark-theme);
-}
-
-.bootbarn-mono-theme {
-  @include error-mixin($bootbarn-mono-theme);
-  @include link-mixin($dark-theme);
 }
