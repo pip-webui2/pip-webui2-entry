@@ -1,4 +1,5 @@
 import {  Component, Input, Output, EventEmitter, ChangeDetectionStrategy  } from '@angular/core';
+import { REGEX_STRING_SERVER_URL, REGEX_STRING_EMAIL } from '../core/defaults';
 
 @Component({
 	selector: 'pip-reset',
@@ -15,13 +16,13 @@ export class PipResetComponent {
     @Input() showUrl: boolean = true;
     @Input() serverUrlName: string = 'Server URL';
     @Input() serverUrl: string;
-    @Input() serverUrlPattern: string = '^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})$';
+    @Input() serverUrlPattern: string = REGEX_STRING_SERVER_URL;
     @Input() serverUrlRequired: string = 'Server URL is required';
     @Input() serverUrlInvalid: string = 'Server URL is invalid';
 
     @Input() emailName: string = 'Email';
     @Input() email: string;
-    @Input() emailPattern: string = '^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$';
+    @Input() emailPattern: string = REGEX_STRING_EMAIL;
     @Input() emailRequired: string = 'Email is required';
     @Input() emailInvalid: string = 'Email URL is invalid';
 
