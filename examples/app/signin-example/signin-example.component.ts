@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -8,19 +8,25 @@ import { Observable } from 'rxjs/Observable';
 	styleUrls: ['signin-example.component.scss']
 })
 
-export class SigninExampleComponent implements OnInit {
+export class SigninExampleComponent {
 
 	public error$: Observable<string>;
 	public serverUrl$: Observable<string>;
 	public email$: Observable<string>;
 	public password: Observable<string>;
 	public loading: Observable<boolean>;
-	public forgotLink: string = '/#/recovery-example';
-	public signupLink: string = 'Not a member? <a href="/#/signup-example" class="pip-link">Sign up here</a>';
+
+	public forgotTitle: string = 'Forgot password?';
+    public signupText: string = "Not a member?";
+	public signupLinkText: string = "Sign up here";
+
+	public constructor(
+		private router: Router
+	) {
+
+	}
+
 	public ngOnInit() {
-		//this.serverUrl$ = new Observable<string>();
-		//this.email$ = new Observable<string>();
-		//this.password = new Observable<string>();
 
 	}
 
@@ -29,7 +35,14 @@ export class SigninExampleComponent implements OnInit {
 	}
 
 	public onAbort(): void {
-
 		console.log("abort");
+	}
+
+	public onForgot(): void {
+		this.router.navigate(['/recovery-example']);
+	}
+
+	public onSignup(): void {
+		this.router.navigate(['/signup-example']);
 	}
 }

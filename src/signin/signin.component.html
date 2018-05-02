@@ -34,14 +34,16 @@
                         <mat-error *ngIf="_password.errors?.pattern">{{passwordInvalid}}</mat-error>
                     </mat-input-container>
 
-                    <a [href]="forgotLink" *ngIf="forgotTitle && forgotLink" class="pip-link">{{forgotTitle}}</a>
+                    <a (click)="onForgot()" *ngIf="forgotTitle && forgot" class="pip-link">{{forgotTitle}}</a>
 
                     <div fxLayout="row" fxLayoutAlign="center center" class="pip-footer">
                         <button mat-raised-button *ngIf="!loading" type="button" fxFlex="100" color="accent" [disabled]="!_signinForm.form.valid"
                             (click)="onSubmit()">{{signinName}}</button>
                         <button mat-raised-button *ngIf="loading" type="button" fxFlex="100" color="warn" (click)="onAbort()"> {{abortName}} </button>
                     </div>
-                    <p [innerHtml]="signupLink" *ngIf="signupLink" class="pip-footer-text"></p>
+                    <p *ngIf="signupText && signupLinkText && signup" class="pip-footer-text">
+                        {{ signupText }} <a (click)="onSignup()" class="pip-link">{{ signupLinkText }}</a> 
+                    </p>
                 </div>
             </form>
         </mat-card-content>
