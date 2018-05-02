@@ -1,9 +1,16 @@
 
 <pip-signup
-[serverUrl]="serverUrl$ | async" 
-[email]="email$ | async" [error]="error$ | async"
-[loading]="loading$ | async"
-[password]="password$ | async"
-[signinLink]="signinLink"
-[privacyLink]="privacyLink"
-(submit)="onSubmit($event)" (abort)="onAbort()" ></pip-signup>
+    [serverUrl]="serverUrl$ | async" 
+    [email]="email$ | async" 
+    [error]="error$ | async"
+    [loading]="loading$ | async"
+    [password]="password$ | async"
+
+    [signinText]="signinText"
+    [signinLinkText]="signinLinkText"
+
+    [privacyLink]="privacyLink"
+    (signin)="onSignin($event)" 
+    (submit)="onSubmit($event)" 
+    (abort)="onAbort()">
+</pip-signup>

@@ -37,7 +37,9 @@ export class PipSignupComponent {
     @Input() passwordInvalid: string = 'Must be a list 6 symbols';
 
     @Input() privacyLink: string;
-    @Input() signinLink: string;
+
+    @Input() signinText: string = "Do you have an account? ";
+    @Input() signinLinkText: string = "Sign in here";
 
     @Input() error: string;
     @Input() loading: boolean;
@@ -46,6 +48,7 @@ export class PipSignupComponent {
 
     @Output() submit = new EventEmitter();
     @Output() abort = new EventEmitter();
+    @Output() signin = new EventEmitter();
 
     public constructor() { }
 
@@ -60,5 +63,9 @@ export class PipSignupComponent {
 
     public onAbort(): void {
         this.abort.emit();
+    }
+
+    public onSignin(): void {
+        this.signin.emit();
     }
 }

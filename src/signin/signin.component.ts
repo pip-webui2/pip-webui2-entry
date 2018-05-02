@@ -31,8 +31,8 @@ export class PipSigninComponent {
     @Input() passwordRequired: string = 'Password is required';
     @Input() passwordInvalid: string = 'Must be a list 6 symbols';
 
-    @Input() forgotTitle: string = 'Forgot password?';
-    @Input() signupText: string = "Not a member?";
+    @Input() forgotTitle: string = 'Forgot password? ';
+    @Input() signupText: string = "Not a member? ";
     @Input() signupLinkText: string = "Sign up here";
 
     @Input() error: any;
