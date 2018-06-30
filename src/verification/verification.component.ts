@@ -1,5 +1,5 @@
 import {  Component, Input, Output, EventEmitter, ChangeDetectionStrategy  } from '@angular/core';
-import { REGEX_STRING_SERVER_URL, REGEX_STRING_EMAIL } from '../core/defaults';
+import { REGEX_STRING_CODE, REGEX_STRING_EMAIL } from '../core/defaults';
 
 @Component({
 	selector: 'pip-verification',
@@ -15,7 +15,7 @@ export class PipVerificationComponent {
     @Input() changeServerUrlName: string = 'Change server';
     @Input() codeName: string = 'Verification code';
     @Input() code: string;
-    @Input() codePattern: string = REGEX_STRING_SERVER_URL;
+    @Input() codePattern: string = REGEX_STRING_CODE;
     @Input() codeRequired: string = 'Code is required';
     @Input() codeInvalid: string = 'Code is invalid';
 
