@@ -25,7 +25,7 @@ export class PipVerificationComponent {
     @Input() emailRequired: string = 'Email is required';
     @Input() emailInvalid: string = 'Email URL is invalid';
 
-    @Input() error: string;
+    @Input() error: any;
     @Input() loading: boolean;
     @Input() cancelName: string = 'Cancel';
     @Input() verificationName: string = 'Verification';
@@ -51,5 +51,9 @@ export class PipVerificationComponent {
 
     public onCancel(): void {
         this.cancel.emit();
+    }
+
+    public onChange(): void {
+       this.error = null;
     }
 }

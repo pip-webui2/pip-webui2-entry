@@ -16,14 +16,14 @@
     
                     <mat-input-container>
                         <input matInput [placeholder]="emailName" type="email" id="email" name="email" [(ngModel)]="email" #_email="ngModel" required
-                            [pattern]="emailPattern" />
+                            [pattern]="emailPattern" (keyup)="onChange()" />
                         <mat-error *ngIf="_email.errors?.required">{{emailRequired}}</mat-error>
                         <mat-error *ngIf="_email.errors?.pattern">{{emailInvalid}}</mat-error>
                     </mat-input-container>
 
                     <mat-input-container>
                         <input matInput [placeholder]="codeName" type="url" id="code" name="code" [(ngModel)]="code" #_code="ngModel" required [pattern]="codePattern"
-                        />
+                        (keyup)="onChange()" />
                         <mat-error *ngIf="_code.errors?.required">{{codeRequired}}</mat-error>
                         <mat-error *ngIf="_code.errors?.pattern">{{codeInvalid}}</mat-error>
                     </mat-input-container>
