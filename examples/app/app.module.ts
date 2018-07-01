@@ -34,12 +34,16 @@ import { RecoveryExampleComponent } from './recovery-example/recovery-example.co
 import { VerificationExampleModule} from './verification-example/verification-example.module';
 import { VerificationExampleComponent } from './verification-example/verification-example.component';
 
+import { PhoneVerificationExampleModule} from './phone-verification-example/phone-verification-example.module';
+import { PhoneVerificationExampleComponent } from './phone-verification-example/phone-verification-example.component';
+
 const appRoutes: Routes = [
   { path: 'signin-example', component: SigninExampleComponent },
   { path: 'signup-example', component: SignupExampleComponent },
   { path: 'reset-example', component: ResetExampleComponent },
   { path: 'recovery-example', component: RecoveryExampleComponent },
-  { path: 'verification-example', component: VerificationExampleComponent },
+  { path: 'email-verification-example', component: VerificationExampleComponent },
+  { path: 'phone-verification-example', component: PhoneVerificationExampleComponent },
   
   { path: '', pathMatch: 'full', redirectTo: 'signin-example' }
 ];
@@ -68,6 +72,7 @@ const appRoutes: Routes = [
     ResetExampleModule,
     RecoveryExampleModule,
     VerificationExampleModule,
+    PhoneVerificationExampleModule, 
 
     PipAppbarModule,
     PipSidenavModule,
