@@ -8,7 +8,6 @@ import { REGEX_STRING_CODE, REGEX_STRING_EMAIL } from '../core/defaults';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PipVerificationComponent {
-
     @Input() title: string = 'Verify email?';
     @Input() subtitle: string;
 
@@ -30,13 +29,20 @@ export class PipVerificationComponent {
     @Input() cancelName: string = 'Cancel';
     @Input() verificationName: string = 'Verification';
     @Input() abortName: string = 'Abort';
-    @Input() resend: string;
+
+    
+    @Input() resendText: string = "If you haven't received the code, press ";
+    @Input() resendText1: string = 'resend';
+    @Input() resendLinkText: string = ' to send it again.';
     
     @Output() submit = new EventEmitter();
     @Output() abort = new EventEmitter();
     @Output() cancel = new EventEmitter();
+    @Output() resend = new EventEmitter();
 
-    public constructor() { }
+    public constructor() { 
+
+    }
 
     public onSubmit(): void {
         this.submit.emit({
@@ -49,11 +55,26 @@ export class PipVerificationComponent {
         this.abort.emit();
     }
 
+    public onResend(_email): void {
+        if (!_email) return;
+        
+        _email.control.markAsTouched();
+
+        if (!this.email || !_email.valid) {
+
+            return;
+        }
+    }
+
     public onCancel(): void {
         this.cancel.emit();
     }
 
-    public onChange(): void {
+    public onChangeEmail(): void {
+       this.error = null;
+    }
+
+    public onChangeCode(): void {
        this.error = null;
     }
 }
