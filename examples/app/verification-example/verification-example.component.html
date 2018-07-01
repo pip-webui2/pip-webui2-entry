@@ -1,9 +1,13 @@
 <pip-verification 
-[code]="code$ | async" 
-[error]="error$ | async" 
-[loading]="loading$ | async" 
-[subtitle]="subtitle" 
-[resend]="resend"
-(submit)="onSubmit($event)"
+    [code]="code$ | async" 
+    [error]="error$ | async" 
+    [loading]="loading$ | async" 
+    [subtitle]="subtitle" 
+    [resendText]="resendText"
+    [resendText1]="resendText1"
+    [resendLinkText]="resendLinkText"
+    [showCancel]="false"
+    (resend)="onResend($event)"
+    (submit)="onSubmit($event)"
     (abort)="onAbort()">
 </pip-verification>

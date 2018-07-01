@@ -10,32 +10,38 @@ import { Observable } from 'rxjs/Observable';
 })
 
 export class VerificationExampleComponent implements OnInit {
-
 	public error$: Observable<string>;
 	public serverUrl$: Observable<string>;
 	public email$: Observable<string>;
-	public code: Observable<string>;
+	public code$: Observable<string>;
 	public loading: Observable<boolean>;
 	public subtitle: string = "Confirm your email address using verification code"
-	public resend: string = " If you haven't received the code, press <a href='/#/resend' class='pip-link'> resend </a> to send it again.";
+    public resendText: string = "If you haven't received the code, press ";
+    public resendText1: string = 'resend';
+    public resendLinkText: string = ' to send it again.';
+    
 	constructor(private router:Router) {
 
 	}
 	public ngOnInit() {
-		//this.serverUrl$ = new Observable<string>();
-		//this.email$ = new Observable<string>();
-		//this.password = new Observable<string>();
 
 	}
 
 	public onSubmit(data): void {
 		console.log("submit", data);
 
-		this.router.navigateByUrl('reset-example');
 	}
 
 	public onAbort(): void {
 
 		console.log("abort");
+	}
+
+    public onResend(data): void {
+        if (!data && !data.ph) {
+
+            return;
+        }
+        console.log('on resend');
 	}
 }
