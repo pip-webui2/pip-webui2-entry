@@ -30,10 +30,11 @@ export class PipVerificationComponent {
     @Input() verificationName: string = 'Verification';
     @Input() abortName: string = 'Abort';
 
-    
     @Input() resendText: string = "If you haven't received the code, press ";
     @Input() resendText1: string = 'resend';
     @Input() resendLinkText: string = ' to send it again.';
+    
+    @Input() showCancel: boolean = true;
     
     @Output() submit = new EventEmitter();
     @Output() abort = new EventEmitter();
@@ -57,7 +58,7 @@ export class PipVerificationComponent {
 
     public onResend(_email): void {
         if (!_email) return;
-        
+
         _email.control.markAsTouched();
 
         if (!this.email || !_email.valid) {

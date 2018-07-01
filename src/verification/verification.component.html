@@ -42,7 +42,7 @@
 
         <mat-card-actions fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px">
             <div fxFlex></div>
-            <button mat-button *ngIf="!loading" type="button" (click)="onCancel()">{{cancelName}}</button>
+            <button mat-button *ngIf="!loading && showCancel" type="button" (click)="onCancel()">{{cancelName}}</button>
             <button mat-button *ngIf="!loading" type="button" color="accent" 
                 [disabled]="!_verificationForm.form.valid" (click)="onSubmit()">{{verificationName}}</button>
             <button mat-button *ngIf="loading" type="button" color="warm" (click)="onAbort()"> {{abortName}} </button>
