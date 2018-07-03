@@ -11,7 +11,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 })
 
 export class EmailVerificationDummyExampleComponent implements OnInit {
-    public error$: Observable<string>;
+    public error$: BehaviorSubject<string>;
     public serverUrl$: Observable<string>;
     public email$: Observable<string>;
     public code$: Observable<string>;
@@ -30,7 +30,8 @@ export class EmailVerificationDummyExampleComponent implements OnInit {
     }
 
     public ngOnInit() {
-		this.showSuccess$ = new BehaviorSubject(false);
+        this.showSuccess$ = new BehaviorSubject(false);
+        this.error$ = new BehaviorSubject('');
     }
 
     public onSubmit(data): void {
@@ -47,8 +48,16 @@ export class EmailVerificationDummyExampleComponent implements OnInit {
             return;
         }
         console.log('resend');
-        setTimeout(() => {
-            this.showSuccess$.next(true);
-        }, 1000);
+        let a = Math.random();
+
+        if (a > 0.5) {
+            setTimeout(() => {
+                this.showSuccess$.next(true);
+            }, 1000);
+        } else {
+            setTimeout(() => {
+                this.error$.next('Wrong email');
+            }, 1000);
+        }
     }
 }
