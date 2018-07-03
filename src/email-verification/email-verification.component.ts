@@ -65,6 +65,7 @@ export class PipEmailVerificationDummyComponent {
         this.resendText = this.resendText === undefined ? "If you haven't received the code, press " : this.resendText;
         this.resendText1 = this.resendText1 === undefined ? 'resend' : this.resendText1;
         this.resendLinkText = this.resendLinkText === undefined ? ' to send it again.' : this.resendLinkText;
+        this.success = this.success === undefined ? 'Code resend success.' : this.success;
     }
 
     public onSubmit(): void {
