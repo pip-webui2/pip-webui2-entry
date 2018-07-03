@@ -12,6 +12,10 @@
     .pip-error {
         color: mat-color($warn) !important;
     }
+    $success: map-get($theme, accent);
+    .pip-success {
+        color: mat-color($success) !important;
+    }
     $primary: map-get($theme, primary);
     .pip-link {
         color: mat-color($primary) !important;

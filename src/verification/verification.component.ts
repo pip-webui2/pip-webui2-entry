@@ -18,6 +18,9 @@ export class PipVerificationComponent {
     @Input() codeRequired: string = 'Code is required';
     @Input() codeInvalid: string = 'Code is invalid';
 
+    @Input() success: string = 'Code send successfuly';
+    @Input() showSuccess: boolean = false;
+
     @Input() emailName: string = 'Email';
     @Input() email: string;
     @Input() emailPattern: string = REGEX_STRING_EMAIL;
@@ -65,6 +68,9 @@ export class PipVerificationComponent {
 
             return;
         }
+        this.showSuccess = false;
+
+        this.resend.emit({ email: this.email });
     }
 
     public onCancel(): void {
@@ -73,9 +79,11 @@ export class PipVerificationComponent {
 
     public onChangeEmail(): void {
        this.error = null;
+       this.showSuccess = false;
     }
 
     public onChangeCode(): void {
        this.error = null;
+       this.showSuccess = false;
     }
 }
