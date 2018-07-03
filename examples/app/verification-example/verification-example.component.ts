@@ -34,11 +34,10 @@ export class VerificationExampleComponent implements OnInit {
     }
 
     public onSubmit(data): void {
-
+        console.log("submit", data);
     }
 
     public onAbort(): void {
-
         console.log("abort");
     }
 

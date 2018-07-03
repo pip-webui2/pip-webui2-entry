@@ -18,11 +18,14 @@ export class PipPhoneVerificationComponent {
     @Input() codeRequired: string = 'Code is required';
     @Input() codeInvalid: string = 'Code is invalid';
 
+    @Input() success: string = 'Code send successfuly';
+    @Input() showSuccess: boolean = false;
+    
     @Input() phoneName: string = 'Phone';
     @Input() phone: string;
     @Input() phonePattern: string = REGEX_STRING_PHONE;
     @Input() phoneRequired: string = 'Phone is required';
-    @Input() phoneInvalid: string = 'Phone URL is invalid';
+    @Input() phoneInvalid: string = 'Enter a valid phone in e.164 format: +xxxxxxxxxxx';
 
     @Input() error: any;
     @Input() loading: boolean;
@@ -65,17 +68,22 @@ export class PipPhoneVerificationComponent {
 
             return;
         }
+        this.showSuccess = false;
+
+        this.resend.emit({ phone: this.phone });
     }
 
     public onCancel(): void {
         this.cancel.emit();
     }
 
-    public onChangePhone(): void {
+    public onChangeEmail(): void {
        this.error = null;
+       this.showSuccess = false;
     }
 
     public onChangeCode(): void {
        this.error = null;
+       this.showSuccess = false;
     }
 }

@@ -11,6 +11,9 @@
             <p *ngIf="error" class="pip-error">
                 {{ error.message || error }}
             </p>
+            <p *ngIf="showSuccess" class="pip-success">
+                {{ success }}
+            </p>
             <form #_verificationForm="ngForm" fxLayout="column" fxLayoutGap="16px">
                 <div fxLayout="column" fxLayoutGap="8px">
 
