@@ -31,19 +31,19 @@ import { RecoveryExampleComponent } from './recovery-example/recovery-example.co
 
 
 
-import { EmailVerificationExampleModule} from './email-verification-example/email-verification-example.module';
-import { EmailVerificationExampleComponent } from './email-verification-example/email-verification-example.component';
+import { EmailVerificationDummyExampleModule} from './email-verification-example/email-verification-example.module';
+import { EmailVerificationDummyExampleComponent } from './email-verification-example/email-verification-example.component';
 
-import { PhoneVerificationExampleModule} from './phone-verification-example/phone-verification-example.module';
-import { PhoneVerificationExampleComponent } from './phone-verification-example/phone-verification-example.component';
+import { PhoneVerificationDummyExampleModule} from './phone-verification-example/phone-verification-example.module';
+import { PhoneVerificationDummyExampleComponent } from './phone-verification-example/phone-verification-example.component';
 
 const appRoutes: Routes = [
   { path: 'signin-example', component: SigninExampleComponent },
   { path: 'signup-example', component: SignupExampleComponent },
   { path: 'reset-example', component: ResetExampleComponent },
   { path: 'recovery-example', component: RecoveryExampleComponent },
-  { path: 'email-verification-example', component: EmailVerificationExampleComponent },
-  { path: 'phone-verification-example', component: PhoneVerificationExampleComponent },
+  { path: 'email-verification-example', component: EmailVerificationDummyExampleComponent },
+  { path: 'phone-verification-example', component: PhoneVerificationDummyExampleComponent },
   
   { path: '', pathMatch: 'full', redirectTo: 'signin-example' }
 ];
@@ -71,8 +71,8 @@ const appRoutes: Routes = [
     SignupExampleModule,
     ResetExampleModule,
     RecoveryExampleModule,
-    EmailVerificationExampleModule,
-    PhoneVerificationExampleModule, 
+    EmailVerificationDummyExampleModule,
+    PhoneVerificationDummyExampleModule, 
 
     PipAppbarModule,
     PipSidenavModule,

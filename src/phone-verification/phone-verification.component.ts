@@ -2,12 +2,12 @@ import {  Component, Input, Output, EventEmitter, ChangeDetectionStrategy  } fro
 import { REGEX_STRING_CODE, REGEX_STRING_PHONE } from '../core/defaults';
 
 @Component({
-	selector: 'pip-phone-verification',
+	selector: 'pip-phone-verification-dummy',
 	templateUrl: 'phone-verification.component.html',
 	styleUrls: ['./phone-verification.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PipPhoneVerificationComponent {
+export class PipPhoneVerificationDummyComponent {
     @Input() title: string = 'Verify phone?';
     @Input() subtitle: string;
 

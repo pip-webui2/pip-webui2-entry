@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
     styleUrls: ['email-verification-example.component.scss']
 })
 
-export class EmailVerificationExampleComponent implements OnInit {
+export class EmailVerificationDummyExampleComponent implements OnInit {
     public error$: Observable<string>;
     public serverUrl$: Observable<string>;
     public email$: Observable<string>;

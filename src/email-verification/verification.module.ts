@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 
 import { BrowserModule } from '@angular/platform-browser';
 
-import { PipEmailVerificationComponent } from './email-verification.component';
+import { PipEmailVerificationDummyComponent } from './email-verification.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material';
@@ -20,7 +20,7 @@ import { PipCardLayoutModule, PipMediaModule, PipShadowModule } from 'pip-webui2
 
 @NgModule({
   declarations: [
-    PipEmailVerificationComponent
+    PipEmailVerificationDummyComponent
   ],
   imports: [
     PipCardLayoutModule, PipMediaModule, PipShadowModule,
@@ -41,7 +41,7 @@ import { PipCardLayoutModule, PipMediaModule, PipShadowModule } from 'pip-webui2
     MatProgressBarModule
   ],
   exports: [
-    PipEmailVerificationComponent
+    PipEmailVerificationDummyComponent
   ],
   providers: [],
 })

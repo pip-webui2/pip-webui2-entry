@@ -2,12 +2,12 @@ import {  Component, Input, Output, EventEmitter, ChangeDetectionStrategy  } fro
 import { REGEX_STRING_CODE, REGEX_STRING_EMAIL } from '../core/defaults';
 
 @Component({
-	selector: 'pip-email-verification',
+	selector: 'pip-email-verification-dummy',
 	templateUrl: 'email-verification.component.html',
 	styleUrls: ['./email-verification.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PipEmailVerificationComponent {
+export class PipEmailVerificationDummyComponent {
     @Input() title: string = 'Verify email?';
     @Input() subtitle: string;
 

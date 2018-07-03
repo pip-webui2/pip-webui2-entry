@@ -1,22 +1,22 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import {PhoneVerificationExampleComponent } from './phone-verification-example.component';
+import {PhoneVerificationDummyExampleComponent } from './phone-verification-example.component';
 
 describe('a signin-example component', () => {
-	let component:PhoneVerificationExampleComponent;
+	let component:PhoneVerificationDummyExampleComponent;
 
 	// register all needed dependencies
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			providers: [
-				PhoneVerificationExampleComponent
+				PhoneVerificationDummyExampleComponent
 			]
 		});
 	});
 
 	// instantiation through framework injection
-	beforeEach(inject([PhoneVerificationExampleComponent], (PhoneVerificationExampleComponent) => {
-		component =PhoneVerificationExampleComponent;
+	beforeEach(inject([PhoneVerificationDummyExampleComponent], (PhoneVerificationDummyExampleComponent) => {
+		component =PhoneVerificationDummyExampleComponent;
 	}));
 
 	it('should have an instance', () => {

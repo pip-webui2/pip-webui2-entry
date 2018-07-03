@@ -1,2 +1,2 @@
-export { PipEmailVerificationComponent } from './email-verification.component';
-export { PipEmailVerificationModule } from './email-verification.module';
+export { PipEmailVerificationDummyComponent } from './email-verification.component';
+export { PipEmailVerificationDummyModule } from './email-verification.module';

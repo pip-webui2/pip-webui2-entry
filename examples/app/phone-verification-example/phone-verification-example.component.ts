@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 	styleUrls: ['phone-verification-example.component.scss']
 })
 
-export class PhoneVerificationExampleComponent implements OnInit {
+export class PhoneVerificationDummyExampleComponent implements OnInit {
 
 	public error$: Observable<string>;
 	public serverUrl$: Observable<string>;

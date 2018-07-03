@@ -4,12 +4,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MatButtonModule, MatIconModule } from '@angular/material';
 
-import { PhoneVerificationExampleComponent } from './phone-verification-example.component';
-import { PipPhoneVerificationModule } from '../pip-webui2-entry';
+import { PhoneVerificationDummyExampleComponent } from './phone-verification-example.component';
+import { PipPhoneVerificationDummyModule } from '../pip-webui2-entry';
 
 @NgModule({
   declarations: [
-    PhoneVerificationExampleComponent
+    PhoneVerificationDummyExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -19,11 +19,11 @@ import { PipPhoneVerificationModule } from '../pip-webui2-entry';
     MatButtonModule,
     MatIconModule,
 
-    PipPhoneVerificationModule
+    PipPhoneVerificationDummyModule
   ],
   exports: [
-    PhoneVerificationExampleComponent
+    PhoneVerificationDummyExampleComponent
   ],
   providers: [],
 })
-export class PhoneVerificationExampleModule { }
+export class PhoneVerificationDummyExampleModule { }
