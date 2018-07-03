@@ -49,22 +49,22 @@ export class PipEmailVerificationDummyComponent {
     }
 
     public ngOnInit() {
-        this.title = this.title === undefined ? 'Verify email?' : null;
-        this.changeServerUrlName = this.changeServerUrlName === undefined ? 'Change server' : null;
-        this.codeName = this.codeName === undefined ? 'Verification code' : null;
-        this.codePattern = this.codePattern === undefined ? REGEX_STRING_CODE : null;
-        this.codeRequired = this.codeRequired === undefined ? 'Code is required' : null;
-        this.codeInvalid = this.codeInvalid === undefined ? 'Code is invalid' : null;
-        this.emailName = this.emailName === undefined ? 'Email' : null;
-        this.emailPattern = this.emailPattern === undefined ? REGEX_STRING_EMAIL : null;
-        this.emailRequired = this.emailRequired === undefined ? 'Email is required' : null;
-        this.emailInvalid = this.emailInvalid === undefined ? 'Email URL is invalid' : null;
-        this.cancelName = this.cancelName === undefined ? 'Cancel' : null;
-        this.verificationName = this.verificationName === undefined ? 'Verification' : null;
-        this.abortName = this.abortName === undefined ? 'Abort' : null;
-        this.resendText = this.resendText === undefined ? "If you haven't received the code, press " : null;
-        this.resendText1 = this.resendText1 === undefined ? 'resend' : null;
-        this.resendLinkText = this.resendLinkText === undefined ? ' to send it again.' : null;
+        this.title = this.title === undefined ? 'Verify email?' : this.title;
+        this.changeServerUrlName = this.changeServerUrlName === undefined ? 'Change server' : this.changeServerUrlName;
+        this.codeName = this.codeName === undefined ? 'Verification code' : this.codeName;
+        this.codePattern = this.codePattern === undefined ? REGEX_STRING_CODE : this.codePattern;
+        this.codeRequired = this.codeRequired === undefined ? 'Code is required' : this.codeRequired;
+        this.codeInvalid = this.codeInvalid === undefined ? 'Code is invalid' : this.codeInvalid;
+        this.emailName = this.emailName === undefined ? 'Email' : this.emailName;
+        this.emailPattern = this.emailPattern === undefined ? REGEX_STRING_EMAIL : this.emailPattern;
+        this.emailRequired = this.emailRequired === undefined ? 'Email is required' : this.emailRequired;
+        this.emailInvalid = this.emailInvalid === undefined ? 'Email URL is invalid' : this.emailInvalid;
+        this.cancelName = this.cancelName === undefined ? 'Cancel' : this.cancelName;
+        this.verificationName = this.verificationName === undefined ? 'Verification' : this.verificationName;
+        this.abortName = this.abortName === undefined ? 'Abort' : this.abortName;
+        this.resendText = this.resendText === undefined ? "If you haven't received the code, press " : this.resendText;
+        this.resendText1 = this.resendText1 === undefined ? 'resend' : this.resendText1;
+        this.resendLinkText = this.resendLinkText === undefined ? ' to send it again.' : this.resendLinkText;
     }
 
     public onSubmit(): void {
