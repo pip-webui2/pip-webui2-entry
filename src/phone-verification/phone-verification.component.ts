@@ -77,7 +77,7 @@ export class PipPhoneVerificationComponent {
         this.cancel.emit();
     }
 
-    public onChangeEmail(): void {
+    public onChangePhone(): void {
        this.error = null;
        this.showSuccess = false;
     }

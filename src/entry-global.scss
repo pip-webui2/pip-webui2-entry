@@ -1,6 +1,7 @@
 @import './signin/signin.component.scss';
 @import './signup/signup.component.scss';
-@import './verification/verification.component.scss';
+@import './email-verification/email-verification.component.scss';
+@import './phone-verification/phone-verification.component.scss';
 @import './reset/reset.component';
 @import './recovery/recovery.component';
 @import '~@angular/material/theming';

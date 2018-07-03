@@ -1,22 +1,22 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { PipVerificationComponent } from './verification.component';
+import { PipEmailVerificationComponent } from './email-verification.component';
 
 describe('a drilldown-list component', () => {
-	let component: PipVerificationComponent;
+	let component: PipEmailVerificationComponent;
 
 	// register all needed dependencies
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			providers: [
-				PipVerificationComponent
+				PipEmailVerificationComponent
 			]
 		});
 	});
 
 	// instantiation through framework injection
-	beforeEach(inject([PipVerificationComponent], (PipVerificationComponent) => {
-		component = PipVerificationComponent;
+	beforeEach(inject([PipEmailVerificationComponent], (PipEmailVerificationComponent) => {
+		component = PipEmailVerificationComponent;
 	}));
 
 	it('should have an instance', () => {

@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import {VerificationExampleComponent } from './verification-example.component';
+import {VerificationExampleComponent } from './email-verification-example.component';
 
 describe('a signin-example component', () => {
 	let component:VerificationExampleComponent;

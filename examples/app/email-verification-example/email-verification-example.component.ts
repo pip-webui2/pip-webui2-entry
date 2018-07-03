@@ -5,12 +5,12 @@ import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Component({
-    selector: 'verification-examples',
-    templateUrl: 'verification-example.component.html',
-    styleUrls: ['verification-example.component.scss']
+    selector: 'email-verification-examples',
+    templateUrl: 'email-verification-example.component.html',
+    styleUrls: ['email-verification-example.component.scss']
 })
 
-export class VerificationExampleComponent implements OnInit {
+export class EmailVerificationExampleComponent implements OnInit {
     public error$: Observable<string>;
     public serverUrl$: Observable<string>;
     public email$: Observable<string>;

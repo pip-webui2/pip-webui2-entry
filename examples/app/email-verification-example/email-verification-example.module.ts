@@ -4,12 +4,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MatButtonModule, MatIconModule } from '@angular/material';
 
-import { VerificationExampleComponent } from './verification-example.component';
-import { PipVerificationModule } from '../pip-webui2-entry';
+import { EmailVerificationExampleComponent } from './email-verification-example.component';
+import { PipEmailVerificationModule } from '../pip-webui2-entry';
 
 @NgModule({
   declarations: [
-    VerificationExampleComponent
+    EmailVerificationExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -19,11 +19,11 @@ import { PipVerificationModule } from '../pip-webui2-entry';
     MatButtonModule,
     MatIconModule,
 
-    PipVerificationModule
+    PipEmailVerificationModule
   ],
   exports: [
-    VerificationExampleComponent
+    EmailVerificationExampleComponent
   ],
   providers: [],
 })
-export class VerificationExampleModule { }
+export class EmailVerificationExampleModule { }
