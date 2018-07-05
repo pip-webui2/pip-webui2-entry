@@ -17,7 +17,8 @@
                     <a *ngIf="showUrl && !changeUrl" (click)="changeUrl = true" class="pip-link pip-server">{{changeServerUrlName}}</a>
                     <mat-input-container *ngIf="showUrl && changeUrl">
                         <input matInput [placeholder]="serverUrlName" type="url" id="serverUrl" name="serverUrl" [(ngModel)]="serverUrl" #_serverUrl="ngModel"
-                            required [pattern]="serverUrlPattern" />
+                            required  /> 
+                            <!-- [pattern]="serverUrlPattern" -->
                         <mat-error *ngIf="_serverUrl.errors?.required">{{serverUrlRequired}}</mat-error>
                         <mat-error *ngIf="_serverUrl.errors?.pattern">{{serverUrlInvalid}}</mat-error>
                     </mat-input-container>
