@@ -19,7 +19,8 @@ export class PipSignupComponent {
     @Input() serverUrlPattern: string = REGEX_STRING_SERVER_URL;
     @Input() serverUrlRequired: string = 'Server URL is required';
     @Input() serverUrlInvalid: string = 'Server URL is invalid';
-
+    @Input() imageUrl: string;
+    
     @Input() emailName: string = 'Email';
     @Input() email: string;
     @Input() emailPattern: string = REGEX_STRING_EMAIL;

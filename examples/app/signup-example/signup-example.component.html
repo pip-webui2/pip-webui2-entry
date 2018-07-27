@@ -5,10 +5,9 @@
     [error]="error$ | async"
     [loading]="loading$ | async"
     [password]="password$ | async"
-
+    [imageUrl]="'./assets/kyrio_logo.png'"
     [signinText]="signinText"
     [signinLinkText]="signinLinkText"
-
     [privacyLink]="privacyLink"
     (signin)="onSignin($event)" 
     (submit)="onSubmit($event)" 

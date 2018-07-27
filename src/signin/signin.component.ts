@@ -15,6 +15,7 @@ export class PipSigninComponent {
     @Input() showUrl: boolean = true;
     @Input() serverUrlName: string = 'Server URL';
     @Input() serverUrl: string;
+    @Input() imageUrl: string;
     // @Input() serverUrlPattern: string = '^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})$';
     @Input() serverUrlPattern: string = REGEX_STRING_SERVER_URL;
     @Input() serverUrlRequired: string = 'Server URL is required';
