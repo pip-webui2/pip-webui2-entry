@@ -36,7 +36,7 @@
                     </mat-input-container>
                     <mat-input-container>
                         <input matInput [placeholder]="passwordName" type="password" id="password" name="password" [(ngModel)]="password" #_password="ngModel"
-                            required pattern="^\w{6,20}$" />
+                            required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}$" />
                         <mat-error *ngIf="_password.errors?.required">{{passwordRequired}}</mat-error>
                         <mat-error *ngIf="_password.errors?.pattern">{{passwordInvalid}}</mat-error>
                     </mat-input-container>
