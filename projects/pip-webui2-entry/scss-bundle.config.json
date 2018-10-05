@@ -1,0 +1,5 @@
+{
+    "entry": "projects/pip-webui2-entry/src/lib/styles.scss",
+    "dest": "dist/pip-webui2-entry/styles.scss",
+    "ignoredImports": ["^~", "node_modules"]
+}

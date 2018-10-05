@@ -1,0 +1,5 @@
+<pip-phone-verification-dummy [code]="code$ | async" [error]="error$ | async" [loading]="loading$ | async"
+                              [showSuccess]="showSuccess$ | async" [subtitle]="subtitle" [resendText]="resendText"
+                              [resendText1]="resendText1" [resendLinkText]="resendLinkText" [showCancel]="false"
+                              [success]="success" (resend)="onResend($event)" (submit)="onSubmit($event)" (abort)="onAbort()">
+</pip-phone-verification-dummy>
