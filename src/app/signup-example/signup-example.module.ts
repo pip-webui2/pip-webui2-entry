@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PipSignupModule } from 'pip-webui2-entry';
-import { PipNavModule } from 'pip-webui2-nav-temp';
+import { PipNavModule } from 'pip-webui2-nav';
 
 import { SignupExampleComponent } from './signup-example.component';
 

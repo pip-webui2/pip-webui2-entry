@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PipRecoveryModule } from 'pip-webui2-entry';
-import { PipNavModule } from 'pip-webui2-nav-temp';
+import { PipNavModule } from 'pip-webui2-nav';
 
 import { RecoveryExampleComponent } from './recovery-example.component';
 

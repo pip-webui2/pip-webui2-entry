@@ -3,5 +3,8 @@
   "dest": "../../dist/pip-webui2-entry",
   "lib": {
     "entryFile": "src/public_api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "^pip-webui2"
+  ]
 }

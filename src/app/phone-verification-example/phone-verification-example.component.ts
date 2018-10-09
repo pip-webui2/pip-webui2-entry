@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PipNavService } from 'pip-webui2-nav-temp';
+import { PipNavService } from 'pip-webui2-nav';
 import { Observable, BehaviorSubject } from 'rxjs';
 
 @Component({

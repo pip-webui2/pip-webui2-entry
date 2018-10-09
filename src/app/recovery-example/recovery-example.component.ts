@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PipNavService } from 'pip-webui2-nav-temp';
+import { PipNavService } from 'pip-webui2-nav';
 import { Observable } from 'rxjs';
 
 @Component({
