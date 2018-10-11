@@ -1,6 +1,6 @@
 {
   "name": "pip-webui2-entry",
-  "version": "1.0.0",
+  "version": "1.0.2-beta.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -30,7 +30,7 @@
     "@ngx-translate/core": "^10.0.2",
     "core-js": "^2.5.4",
     "lodash": "^4.17.11",
-    "pip-webui2-layouts": "^1.0.0",
+    "pip-webui2-layouts": "^1.0.2-beta.1",
     "pip-webui2-nav": "^1.0.0",
     "pip-webui2-themes": "^1.0.1",
     "rxjs": "~6.2.0",
