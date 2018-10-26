@@ -38,7 +38,7 @@ export class PipSignupComponent {
     @Input() password: string;
     @Input() passwordPattern: string = REGEX_STRING_PASSWORD;
     @Input() passwordRequired = 'Password is required';
-    @Input() passwordInvalid = 'Must be a list 6 symbols';
+    @Input() passwordInvalid = 'Must be a list 3 symbols';
 
     @Input() privacyLink: string;
 
@@ -47,8 +47,8 @@ export class PipSignupComponent {
 
     @Input() error: any;
     @Input() loading: boolean;
-    @Input() signupName = 'Signup';
-    @Input() abortName = 'Abort';
+    @Input() signupName = 'SIGNUP';
+    @Input() abortName = 'ABORT';
     @Input() isTransparent = false;
 
     @Output() submit = new EventEmitter();

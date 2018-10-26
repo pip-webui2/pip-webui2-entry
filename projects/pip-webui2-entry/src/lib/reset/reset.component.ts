@@ -37,13 +37,13 @@ export class PipResetComponent {
     @Input() password: string;
     @Input() passwordPattern: string = REGEX_STRING_PASSWORD;
     @Input() passwordRequired = 'Password is required';
-    @Input() passwordInvalid = 'Must be a list 6 symbols';
+    @Input() passwordInvalid = 'Must be a list 3 symbols';
 
     @Input() error: any;
     @Input() loading: boolean;
-    @Input() cancelName = 'Cancel';
-    @Input() resetName = 'Reset';
-    @Input() abortName = 'Abort';
+    @Input() cancelName = 'CANCEL';
+    @Input() resetName = 'RESET';
+    @Input() abortName = 'ABORT';
     @Input() isTransparent = false;
 
     @Output() submit = new EventEmitter();

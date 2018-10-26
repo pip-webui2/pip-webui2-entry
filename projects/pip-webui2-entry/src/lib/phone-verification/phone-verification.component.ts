@@ -29,9 +29,9 @@ export class PipPhoneVerificationDummyComponent {
 
     @Input() error: any;
     @Input() loading: boolean;
-    @Input() cancelName = 'Cancel';
-    @Input() verificationName = 'Verification';
-    @Input() abortName = 'Abort';
+    @Input() cancelName = 'CANCEL';
+    @Input() verificationName = 'VERIFICATION';
+    @Input() abortName = 'ABORT';
     @Input() isTransparent = false;
 
     @Input() resendText = 'If you haven\'t received the code, press ';

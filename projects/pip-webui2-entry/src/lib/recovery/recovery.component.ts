@@ -32,9 +32,9 @@ export class PipRecoveryComponent {
     @Input() any;
     @Input() error: any;
     @Input() loading: boolean;
-    @Input() cancelName = 'Cancel';
-    @Input() recoveryName = 'Recovery';
-    @Input() abortName = 'Abort';
+    @Input() cancelName = 'CANCEL';
+    @Input() recoveryName = 'RECOVERY';
+    @Input() abortName = 'ABORT';
     @Input() isTransparent = false;
 
     @Output() submit = new EventEmitter();

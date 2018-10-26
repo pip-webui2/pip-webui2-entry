@@ -37,7 +37,7 @@
                     </mat-form-field>
                     <mat-form-field>
                         <input matInput [placeholder]="passwordName" type="password" id="password" name="password"
-                               [(ngModel)]="password" #_password="ngModel" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}$" />
+                               [(ngModel)]="password" #_password="ngModel" required pattern="^\w{3,}$" />
                         <mat-error *ngIf="_password.errors?.required">{{passwordRequired}}</mat-error>
                         <mat-error *ngIf="_password.errors?.pattern">{{passwordInvalid}}</mat-error>
                     </mat-form-field>
