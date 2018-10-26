@@ -1,12 +1,13 @@
 {
   "name": "pip-webui2-entry",
-  "version": "1.0.2-beta.3",
+  "version": "1.0.2-beta.4",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/pip-webui2/pip-webui2-entry"
   },
   "dependencies": {
+    "@ngx-translate/core": "^10.0.2",
     "pip-webui2-layouts": "^1.0.2-beta.1",
     "pip-webui2-themes": "^1.0.1"
   },

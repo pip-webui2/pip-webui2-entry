@@ -38,7 +38,7 @@ export class PipSignupComponent {
     @Input() password: string;
     @Input() passwordPattern: string = REGEX_STRING_PASSWORD;
     @Input() passwordRequired = 'Password is required';
-    @Input() passwordInvalid = 'Must be a list 3 symbols';
+    @Input() passwordInvalid = 'Must be at least 3 symbols';
 
     @Input() privacyLink: string;
 

@@ -4,49 +4,48 @@
 <pip-card-layout fxFlex="fill" [transparent]="isTransparent">
     <mat-card>
         <mat-card-content>
-            <mat-progress-bar mode="indeterminate" class="pip-loading" *ngIf="loading"></mat-progress-bar>
+            <mat-progress-bar mode="indeterminate" class="pip-loading" *ngIf="isLoading"></mat-progress-bar>
             <div>
                 <img class="pip-pic" src="{{ imageUrl }}" *ngIf="imageUrl">
             </div>
-            <h2 class="pip-title">{{title}}</h2>
+            <h2 class="pip-title">{{title | translate}}</h2>
             <h4 class="pip-subtitle" [innerHTML]="subtitle" *ngIf="subtitle"></h4>
 
             <p *ngIf="error" class="pip-error">
                 {{error.message || error}}
             </p>
-            <form #_signinForm="ngForm" fxLayout="column" fxLayoutGap="16px">
+            <form fxLayout="column" fxLayoutGap="16px" [formGroup]="form" (submit)="onSubmit()">
                 <div fxLayout="column" fxLayoutGap="8px">
 
-                    <a *ngIf="showUrl && !changeUrl" (click)="changeUrl = true" class="pip-link pip-server">{{changeServerUrlName}}</a>
+                    <a *ngIf="showUrl && !changeUrl" (click)="toogleChangeUrl()" class="pip-link pip-server">{{changeServerUrlName | translate}}</a>
                     <mat-form-field *ngIf="showUrl && changeUrl">
                         <input matInput [placeholder]="serverUrlName" type="url" id="serverUrl" name="serverUrl"
-                               [(ngModel)]="serverUrl" #_serverUrl="ngModel" required [pattern]="serverUrlPattern" />
-                        <mat-error *ngIf="_serverUrl.errors?.required">{{serverUrlRequired}}</mat-error>
-                        <mat-error *ngIf="_serverUrl.errors?.pattern">{{serverUrlInvalid}}</mat-error>
+                               formControlName="url" />
+                        <mat-error *ngIf="hasError('url', 'required')">{{serverUrlRequired | translate}}</mat-error>
+                        <mat-error *ngIf="hasError('url', 'pattern')">{{serverUrlInvalid | translate}}</mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input matInput [placeholder]="emailName" type="email" id="email" name="email" [(ngModel)]="email"
-                               #_email="ngModel" required [pattern]="emailPattern" />
-                        <mat-error *ngIf="_email.errors?.required">{{emailRequired}}</mat-error>
-                        <mat-error *ngIf="_email.errors?.pattern">{{emailInvalid}}</mat-error>
+                        <input matInput [placeholder]="emailName" type="email" id="email" name="email" formControlName="email" />
+                        <mat-error *ngIf="hasError('email', 'required')">{{emailRequired | translate}}</mat-error>
+                        <mat-error *ngIf="hasError('email', 'pattern')">{{emailInvalid | translate}}</mat-error>
                     </mat-form-field>
                     <mat-form-field>
                         <input matInput [placeholder]="passwordName" type="password" id="password" name="password"
-                               [(ngModel)]="password" #_password="ngModel" required pattern="^\w{3,}$" />
-                        <mat-error *ngIf="_password.errors?.required">{{passwordRequired}}</mat-error>
-                        <mat-error *ngIf="_password.errors?.pattern">{{passwordInvalid}}</mat-error>
+                               formControlName="password" />
+                        <mat-error *ngIf="hasError('password', 'required')">{{passwordRequired | translate}}</mat-error>
+                        <mat-error *ngIf="hasError('password', 'pattern')">{{passwordInvalid | translate}}</mat-error>
                     </mat-form-field>
 
-                    <a (click)="onForgot()" *ngIf="forgotTitle && forgot" class="pip-link">{{forgotTitle}}</a>
+                    <a (click)="onForgot()" *ngIf="forgotTitle && forgot" class="pip-link">{{forgotTitle | translate}}</a>
 
                     <div fxLayout="row" fxLayoutAlign="center center" class="pip-footer">
-                        <button mat-raised-button *ngIf="!loading" type="button" fxFlex="100" color="accent" [disabled]="!_signinForm.form.valid"
-                                (click)="onSubmit()">{{signinName}}</button>
-                        <button mat-raised-button *ngIf="loading" type="button" fxFlex="100" color="warn" (click)="onAbort()">
-                            {{abortName}} </button>
+                        <button mat-raised-button *ngIf="!isLoading" type="button" fxFlex="100" color="accent" [disabled]="form.invalid"
+                                (click)="onSubmit()">{{signinName | translate}}</button>
+                        <button mat-raised-button *ngIf="isLoading" type="button" fxFlex="100" color="warn" (click)="onAbort()">
+                            {{abortName | translate}} </button>
                     </div>
                     <p *ngIf="signupText && signupLinkText && signup" class="pip-footer-text">
-                        {{ signupText }} <a (click)="onSignup()" class="pip-link">{{ signupLinkText }}</a>
+                        {{signupText | translate}} <a (click)="onSignup()" class="pip-link">{{signupLinkText | translate}}</a>
                     </p>
                 </div>
             </form>

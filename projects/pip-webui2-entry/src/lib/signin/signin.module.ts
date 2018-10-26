@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatIconModule,
   MatButtonModule,
@@ -12,6 +12,7 @@ import {
   MatSelectModule,
   MatProgressBarModule
 } from '@angular/material';
+import { TranslateModule } from '@ngx-translate/core';
 import { PipCardLayoutModule, PipMediaModule, PipShadowModule } from 'pip-webui2-layouts';
 
 import { PipSigninComponent } from './signin.component';
@@ -26,7 +27,9 @@ import { PipSigninComponent } from './signin.component';
     FlexLayoutModule,
 
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
+    TranslateModule,
 
     MatIconModule,
     MatButtonModule,
