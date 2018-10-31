@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 import { REGEX_STRING_SERVER_URL, REGEX_STRING_EMAIL, REGEX_STRING_PASSWORD } from '../core/defaults';
 
@@ -13,11 +13,7 @@ export class PipSigninComponent {
 
     public changeUrl = false;
     public isLoading = false;
-    public form = this.fb.group({
-        url: [''],
-        email: ['', [Validators.required, Validators.pattern(REGEX_STRING_EMAIL)]],
-        password: ['', [Validators.required, Validators.pattern(REGEX_STRING_PASSWORD)]]
-    });
+    public form: FormGroup;
 
     @Input() title = 'Sign in';
     @Input() subtitle: string;
@@ -93,7 +89,13 @@ export class PipSigninComponent {
 
     public constructor(
         private fb: FormBuilder
-    ) { }
+    ) {
+        this.form = this.fb.group({
+            url: [''],
+            email: ['', [Validators.required, Validators.pattern(REGEX_STRING_EMAIL)]],
+            password: ['', [Validators.required, Validators.pattern(REGEX_STRING_PASSWORD)]]
+        });
+    }
 
     public onSubmit(): void {
         this.form.updateValueAndValidity();
