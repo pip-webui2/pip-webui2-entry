@@ -1,25 +1,32 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { TestBed, inject, ComponentFixture } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { PipSigninComponent } from './signin.component';
+import { PipSigninModule } from './signin.module';
 
-describe('a drilldown-list component', () => {
-	let component: PipSigninComponent;
+describe('a signin component', () => {
+    let component: PipSigninComponent;
+    let fixture: ComponentFixture<PipSigninComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				PipSigninComponent
-			]
-		});
-	});
+    // register all needed dependencies
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [
+                TranslateModule.forRoot(),
 
-	// instantiation through framework injection
-	beforeEach(inject([PipSigninComponent], (PipSigninComponent) => {
-		component = PipSigninComponent;
-	}));
+                PipSigninModule
+            ]
+        });
+        fixture = TestBed.createComponent(PipSigninComponent);
+        component = fixture.componentInstance;
+    });
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+    // instantiation through framework injection
+    // beforeEach(inject([PipEmailVerificationDummyComponent], (PipEmailVerificationDummyComponent) => {
+    //     component = PipEmailVerificationDummyComponent;
+    // }));
+
+    it('should have an instance', () => {
+        expect(component).toBeDefined();
+    });
 });

@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { PhoneVerificationExampleComponent } from './phone-verification-example.component';
+import { PhoneVerificationExampleModule } from './phone-verification-example.module';
 
 describe('PhoneVerificationExampleComponent', () => {
   let component: PhoneVerificationExampleComponent;
@@ -8,9 +12,15 @@ describe('PhoneVerificationExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PhoneVerificationExampleComponent ]
+      imports: [
+        NoopAnimationsModule,
+        RouterModule.forRoot([]),
+        TranslateModule.forRoot(),
+
+        PhoneVerificationExampleModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { ResetExampleComponent } from './reset-example.component';
+import { ResetExampleModule } from './reset-example.module';
 
 describe('ResetExampleComponent', () => {
   let component: ResetExampleComponent;
@@ -8,9 +12,15 @@ describe('ResetExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ResetExampleComponent ]
+      imports: [
+        NoopAnimationsModule,
+        RouterModule.forRoot([]),
+        TranslateModule.forRoot(),
+
+        ResetExampleModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

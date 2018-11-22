@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { SigninExampleComponent } from './signin-example.component';
+import { SigninExampleModule } from './signin-example.module';
 
 describe('SigninExampleComponent', () => {
   let component: SigninExampleComponent;
@@ -8,9 +12,15 @@ describe('SigninExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SigninExampleComponent ]
+      imports: [
+        NoopAnimationsModule,
+        RouterModule.forRoot([]),
+        TranslateModule.forRoot(),
+
+        SigninExampleModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

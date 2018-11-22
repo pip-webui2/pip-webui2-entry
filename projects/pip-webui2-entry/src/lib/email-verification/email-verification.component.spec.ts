@@ -1,25 +1,27 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { TestBed, inject, ComponentFixture } from '@angular/core/testing';
 
 import { PipEmailVerificationDummyComponent } from './email-verification.component';
+import { PipEmailVerificationDummyModule } from './email-verification.module';
 
-describe('a drilldown-list component', () => {
-	let component: PipEmailVerificationDummyComponent;
+describe('a email-verification component', () => {
+    let component: PipEmailVerificationDummyComponent;
+    let fixture: ComponentFixture<PipEmailVerificationDummyComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				PipEmailVerificationDummyComponent
-			]
-		});
-	});
+    // register all needed dependencies
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            imports: [PipEmailVerificationDummyModule]
+        });
+        fixture = TestBed.createComponent(PipEmailVerificationDummyComponent);
+        component = fixture.componentInstance;
+    });
 
-	// instantiation through framework injection
-	beforeEach(inject([PipEmailVerificationDummyComponent], (PipEmailVerificationDummyComponent) => {
-		component = PipEmailVerificationDummyComponent;
-	}));
+    // instantiation through framework injection
+    // beforeEach(inject([PipEmailVerificationDummyComponent], (PipEmailVerificationDummyComponent) => {
+    //     component = PipEmailVerificationDummyComponent;
+    // }));
 
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+    it('should have an instance', () => {
+        expect(component).toBeDefined();
+    });
 });

@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SignupExampleComponent } from './signup-example.component';
+import { SignupExampleModule } from './signup-example.module';
 
 describe('SignupExampleComponent', () => {
   let component: SignupExampleComponent;
@@ -8,9 +11,14 @@ describe('SignupExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SignupExampleComponent ]
+      imports: [
+        NoopAnimationsModule,
+        RouterModule.forRoot([]),
+
+        SignupExampleModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

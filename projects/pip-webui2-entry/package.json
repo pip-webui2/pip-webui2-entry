@@ -1,22 +1,22 @@
 {
   "name": "pip-webui2-entry",
-  "version": "1.0.2-beta.5",
+  "version": "1.1.0",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/pip-webui2/pip-webui2-entry"
   },
   "dependencies": {
-    "@ngx-translate/core": "^10.0.2",
-    "pip-webui2-layouts": "^1.0.2-beta.1",
-    "pip-webui2-themes": "^1.0.1"
+    "@ngx-translate/core": "^11.0.1",
+    "pip-webui2-layouts": "^1.1.0",
+    "pip-webui2-themes": "^1.1.2"
   },
   "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/cdk": "^6.4.7",
-    "@angular/flex-layout": "^6.0.0-beta.18",
-    "@angular/forms": "^6.1.0",
-    "@angular/material": "^6.4.7"
+    "@angular/cdk": "^7.1.0",
+    "@angular/common": "^7.1.0",
+    "@angular/core": "^7.1.0",
+    "@angular/flex-layout": "^7.0.0-beta.19",
+    "@angular/forms": "^7.1.0",
+    "@angular/material": "^7.1.0"
   }
 }

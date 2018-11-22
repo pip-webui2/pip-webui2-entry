@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { EmailVerificationExampleComponent } from './email-verification-example.component';
+import { EmailVerificationExampleModule } from './email-verification-example.module';
 
 describe('EmailVerificationExampleComponent', () => {
   let component: EmailVerificationExampleComponent;
@@ -8,9 +12,15 @@ describe('EmailVerificationExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EmailVerificationExampleComponent ]
+      imports: [
+        NoopAnimationsModule,
+        RouterModule.forRoot([]),
+        TranslateModule.forRoot(),
+
+        EmailVerificationExampleModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
