@@ -29,7 +29,7 @@ import { PipSigninComponent } from './signin.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    TranslateModule.forChild(),
+    TranslateModule,
 
     MatIconModule,
     MatButtonModule,
