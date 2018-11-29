@@ -9,7 +9,7 @@ import {
   PipRightnavModule,
   PipMediaModule,
   PipSidenavModule,
-  PipMainLayoutModule,
+  PipMainLayoutAltModule,
   PipRootLayoutModule,
   PipSidenavExpanderModule
 } from 'pip-webui2-layouts';
@@ -49,7 +49,7 @@ import { SignupExampleModule } from './signup-example/signup-example.module';
     PipRightnavModule,
     PipMediaModule,
     PipSidenavModule,
-    PipMainLayoutModule,
+    PipMainLayoutAltModule,
     PipRootLayoutModule,
     PipSidenavExpanderModule,
     PipBreadcrumbModule,
