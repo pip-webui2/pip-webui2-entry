@@ -1,4 +1,5 @@
 import { TestBed, inject, ComponentFixture } from '@angular/core/testing';
+import { PipMediaModule } from 'pip-webui2-layouts';
 
 import { PipRecoveryComponent } from './recovery.component';
 import { PipRecoveryModule } from './recovery.module';
@@ -10,7 +11,7 @@ describe('a recovery component', () => {
     // register all needed dependencies
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [PipRecoveryModule]
+            imports: [PipRecoveryModule, PipMediaModule.forRoot()]
         });
         fixture = TestBed.createComponent(PipRecoveryComponent);
         component = fixture.componentInstance;

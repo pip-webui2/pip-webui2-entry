@@ -1,5 +1,6 @@
 import { TestBed, inject, ComponentFixture } from '@angular/core/testing';
 import { TranslateModule } from '@ngx-translate/core';
+import { PipMediaModule } from 'pip-webui2-layouts';
 
 import { PipSigninComponent } from './signin.component';
 import { PipSigninModule } from './signin.module';
@@ -13,6 +14,7 @@ describe('a signin component', () => {
         TestBed.configureTestingModule({
             imports: [
                 TranslateModule.forRoot(),
+                PipMediaModule.forRoot(),
 
                 PipSigninModule
             ]

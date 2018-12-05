@@ -1,6 +1,4 @@
-@import '~@angular/material/theming';
 @import "~pip-webui2-themes/styles.scss";
-@include mat-core();
 @mixin content($theme) {
     $warn: map-get($theme, warn);
     .pip-error {

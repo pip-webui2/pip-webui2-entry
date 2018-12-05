@@ -13,7 +13,7 @@ import {
   MatProgressBarModule
 } from '@angular/material';
 import { TranslateModule } from '@ngx-translate/core';
-import { PipCardLayoutModule, PipMediaModule, PipShadowModule } from 'pip-webui2-layouts';
+import { PipCardLayoutModule, PipShadowModule } from 'pip-webui2-layouts';
 
 import { PipSigninComponent } from './signin.component';
 
@@ -22,7 +22,7 @@ import { PipSigninComponent } from './signin.component';
     PipSigninComponent
   ],
   imports: [
-    PipCardLayoutModule, PipMediaModule, PipShadowModule,
+    PipCardLayoutModule, PipShadowModule,
     CommonModule,
     FlexLayoutModule,
 

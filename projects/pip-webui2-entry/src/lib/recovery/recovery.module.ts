@@ -12,7 +12,7 @@ import {
   MatSelectModule,
   MatProgressBarModule,
 } from '@angular/material';
-import { PipCardLayoutModule, PipMediaModule, PipShadowModule } from 'pip-webui2-layouts';
+import { PipCardLayoutModule, PipShadowModule } from 'pip-webui2-layouts';
 
 import { PipRecoveryComponent } from './recovery.component';
 
@@ -21,7 +21,7 @@ import { PipRecoveryComponent } from './recovery.component';
     PipRecoveryComponent
   ],
   imports: [
-    PipCardLayoutModule, PipMediaModule, PipShadowModule,
+    PipCardLayoutModule, PipShadowModule,
 
     FlexLayoutModule,
 
