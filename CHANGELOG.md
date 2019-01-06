@@ -17,3 +17,21 @@ No breaking changes in this version
 
 ### Bug Fixes
 No fixes in this version 
+
+## <a name="1.1.4"></a> 1.1.4 (2019-01-07)
+
+Signin submit by Enter pressing
+
+### Features
+* **email-verification** component
+* **phone-verification** component
+* **password recovery** component
+* **password reset** component
+* **signin** component
+* **signout** component
+
+### Breaking Changes
+No breaking changes in this version
+
+### Bug Fixes
+No fixes in this version 

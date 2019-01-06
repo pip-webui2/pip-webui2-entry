@@ -5,7 +5,7 @@
     <mat-card>
         <mat-card-content>
             <mat-progress-bar mode="indeterminate" class="pip-loading" *ngIf="isLoading"></mat-progress-bar>
-            <div>
+            <div style="text-align: center">
                 <img class="pip-pic" src="{{ imageUrl }}" *ngIf="imageUrl">
             </div>
             <h2 class="pip-title">{{title | translate}}</h2>
@@ -14,7 +14,7 @@
             <p *ngIf="error" class="pip-error">
                 {{error.message || error}}
             </p>
-            <form fxLayout="column" fxLayoutGap="16px" [formGroup]="form" (submit)="onSubmit()">
+            <form fxLayout="column" fxLayoutGap="16px" [formGroup]="form" (submit)="onSubmit()" (keyup.enter)="onSubmit()">
                 <div fxLayout="column" fxLayoutGap="8px">
 
                     <a *ngIf="showUrl && !changeUrl" (click)="toogleChangeUrl()" class="pip-link pip-server">{{changeServerUrlName | translate}}</a>
