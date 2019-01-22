@@ -2,7 +2,12 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/pip-webui2-entry",
   "lib": {
-    "entryFile": "src/public_api.ts"
+    "entryFile": "src/public_api.ts",
+    "umdModuleIds": {
+      "@ngx-translate/core": "^11.0.1",
+      "pip-webui2-layouts": "^1.1.10",
+      "pip-webui2-themes": "^1.1.10"
+    }
   },
   "whitelistedNonPeerDependencies": [
     "@ngx-translate",

@@ -16,7 +16,7 @@ const appRoutes: Routes = [
     { path: 'email-verification-example', component: EmailVerificationExampleComponent },
     { path: 'phone-verification-example', component: PhoneVerificationExampleComponent },
 
-    { path: '', pathMatch: 'full', redirectTo: 'signin-example' }
+    { path: '**', redirectTo: 'signin-example' }
 ];
 
 @NgModule({

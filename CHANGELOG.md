@@ -34,4 +34,22 @@ Signin submit by Enter pressing
 No breaking changes in this version
 
 ### Bug Fixes
-No fixes in this version 
+No fixes in this version
+
+## <a name="1.1.5"></a> 1.1.5 (2019-01-22)
+
+Update for new themes
+
+### Features
+* **email-verification** component
+* **phone-verification** component
+* **password recovery** component
+* **password reset** component
+* **signin** component
+* **signout** component
+
+### Breaking Changes
+No breaking changes in this version
+
+### Bug Fixes
+No fixes in this version
