@@ -1,5 +1,5 @@
 <pip-signin [serverUrl]="serverUrl$ | async" [email]="email$ | async" [error]="error$ | async" [loading]="loading$ | async"
-            passwordPattern="^\w{3,}$" passwordInvalid="PASSWORD_INVALID"
+            passwordInvalid="PASSWORD_INVALID"
             [password]="password$ | async" [forgotTitle]="forgotTitle" [signupText]="signupText" [signupLinkText]="signupLinkText"
             [imageUrl]="'./assets/kyrio_logo.png'" (forgot)="onForgot($event)" (signup)="onSignup()" (submit)="onSubmit($event)"
             (abort)="onAbort()">

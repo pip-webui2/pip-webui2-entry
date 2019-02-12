@@ -53,3 +53,21 @@ No breaking changes in this version
 
 ### Bug Fixes
 No fixes in this version
+
+## <a name="1.1.6"></a> 1.1.6 (2019-02-12)
+
+Signin password check removed
+
+### Features
+* **email-verification** component
+* **phone-verification** component
+* **password recovery** component
+* **password reset** component
+* **signin** component
+* **signout** component
+
+### Breaking Changes
+No breaking changes in this version
+
+### Bug Fixes
+* Signin password check removed

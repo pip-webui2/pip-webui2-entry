@@ -93,7 +93,7 @@ export class PipSigninComponent {
         this.form = this.fb.group({
             url: [''],
             email: ['', [Validators.required, Validators.pattern(REGEX_STRING_EMAIL)]],
-            password: ['', [Validators.required, Validators.pattern(REGEX_STRING_PASSWORD)]]
+            password: ['', [Validators.required]]
         });
     }
 
