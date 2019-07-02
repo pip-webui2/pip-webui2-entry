@@ -79,6 +79,7 @@ export class PipSigninComponent {
         val ? this.form.disable() : this.form.enable();
     }
     @Input() signinName = 'SIGNIN';
+    @Input() signinButtonColor = 'accent';
     @Input() abortName = 'ABORT';
     @Input() isTransparent = false;
 

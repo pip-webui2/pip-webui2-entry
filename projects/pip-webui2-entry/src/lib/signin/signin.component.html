@@ -39,7 +39,7 @@
                     <a (click)="onForgot()" *ngIf="forgotTitle && forgot" class="pip-link">{{forgotTitle | translate}}</a>
 
                     <div fxLayout="row" fxLayoutAlign="center center" class="pip-footer">
-                        <button mat-raised-button *ngIf="!isLoading" type="button" fxFlex="100" color="accent" [disabled]="form.invalid"
+                        <button mat-raised-button *ngIf="!isLoading" type="button" fxFlex="100" [color]="signinButtonColor" [disabled]="form.invalid"
                                 (click)="onSubmit()">{{signinName | translate}}</button>
                         <button mat-raised-button *ngIf="isLoading" type="button" fxFlex="100" color="warn" (click)="onAbort()">
                             {{abortName | translate}} </button>

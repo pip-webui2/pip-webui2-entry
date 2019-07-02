@@ -45,7 +45,7 @@
                     <p [innerHtml]="privacyLink" *ngIf="privacyLink"></p>
 
                     <div fxLayout="row" fxLayoutAlign="center center" class="pip-footer">
-                        <button mat-raised-button *ngIf="!loading" type="button" fxFlex="100" color="accent" [disabled]="!_signupForm.form.valid"
+                        <button mat-raised-button *ngIf="!loading" type="button" fxFlex="100" [color]="signupButtonColor" [disabled]="!_signupForm.form.valid"
                                 (click)="onSubmit()">{{signupName}}</button>
                         <button mat-raised-button *ngIf="loading" type="button" fxFlex="100" color="warn" (click)="onAbort()">
                             {{abortName}} </button>

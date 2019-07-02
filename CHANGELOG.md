@@ -71,3 +71,21 @@ No breaking changes in this version
 
 ### Bug Fixes
 * Signin password check removed
+
+## <a name="1.1.7"></a> 1.1.7 (2019-07-02)
+
+Add option to change signin and signup button colors
+
+### Features
+* **email-verification** component
+* **phone-verification** component
+* **password recovery** component
+* **password reset** component
+* **signin** component
+* **signout** component
+
+### Breaking Changes
+No breaking changes in this version
+
+### Bug Fixes
+No fixes in this version

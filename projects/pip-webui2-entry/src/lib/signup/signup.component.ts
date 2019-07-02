@@ -50,6 +50,7 @@ export class PipSignupComponent {
     @Input() signupName = 'SIGNUP';
     @Input() abortName = 'ABORT';
     @Input() isTransparent = false;
+    @Input() signupButtonColor = 'accent';
 
     @Output() submit = new EventEmitter();
     @Output() abort = new EventEmitter();
