@@ -18,24 +18,24 @@
 
                     <mat-form-field *ngIf="showUrl && changeUrl">
                         <input matInput [placeholder]="serverUrlName" type="url" id="serverUrl" name="serverUrl"
-                               [(ngModel)]="serverUrl" #_serverUrl="ngModel" required [pattern]="serverUrlPattern" />
+                               [(ngModel)]="serverUrl" #_serverUrl="ngModel" required [pattern]="serverUrlPattern" autocomplete="server-url" />
                         <mat-error *ngIf="_serverUrl.errors?.required">{{serverUrlRequired}}</mat-error>
                         <mat-error *ngIf="_serverUrl.errors?.pattern">{{serverUrlInvalid}}</mat-error>
                     </mat-form-field>
                     <mat-form-field>
                         <input matInput [placeholder]="emailName" type="email" id="email" name="email" [(ngModel)]="email"
-                               #_email="ngModel" required [pattern]="emailPattern" />
+                               #_email="ngModel" required [pattern]="emailPattern" autocomplete="email" />
                         <mat-error *ngIf="_email.errors?.required">{{emailRequired}}</mat-error>
                         <mat-error *ngIf="_email.errors?.pattern">{{emailInvalid}}</mat-error>
                     </mat-form-field>
                     <mat-form-field>
                         <input matInput [placeholder]="codeName" type="text" id="code" name="code" [(ngModel)]="code"
-                               #_code="ngModel" required />
+                               #_code="ngModel" autocomplete="verification-code" required />
                         <mat-error *ngIf="_code.errors?.required">{{codeRequired}}</mat-error>
                     </mat-form-field>
                     <mat-form-field>
                         <input matInput [placeholder]="passwordName" type="password" id="password" name="password"
-                               [(ngModel)]="password" #_password="ngModel" required pattern="^\w{3,}$" />
+                               [(ngModel)]="password" #_password="ngModel" autocomplete="new-password" required pattern="^\w{3,}$" />
                         <mat-error *ngIf="_password.errors?.required">{{passwordRequired}}</mat-error>
                         <mat-error *ngIf="_password.errors?.pattern">{{passwordInvalid}}</mat-error>
                     </mat-form-field>

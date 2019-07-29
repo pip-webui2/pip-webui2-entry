@@ -20,18 +20,18 @@
                     <a *ngIf="showUrl && !changeUrl" (click)="toogleChangeUrl()" class="pip-link pip-server">{{changeServerUrlName | translate}}</a>
                     <mat-form-field *ngIf="showUrl && changeUrl">
                         <input matInput [placeholder]="serverUrlName" type="url" id="serverUrl" name="serverUrl"
-                               formControlName="url" />
+                               formControlName="url" autocomplete="server-url" />
                         <mat-error *ngIf="hasError('url', 'required')">{{serverUrlRequired | translate}}</mat-error>
                         <mat-error *ngIf="hasError('url', 'pattern')">{{serverUrlInvalid | translate}}</mat-error>
                     </mat-form-field>
                     <mat-form-field>
-                        <input matInput [placeholder]="emailName" type="email" id="email" name="email" formControlName="email" />
+                        <input matInput [placeholder]="emailName" type="email" id="email" name="email" formControlName="email" autocomplete="email" />
                         <mat-error *ngIf="hasError('email', 'required')">{{emailRequired | translate}}</mat-error>
                         <mat-error *ngIf="hasError('email', 'pattern')">{{emailInvalid | translate}}</mat-error>
                     </mat-form-field>
                     <mat-form-field>
                         <input matInput [placeholder]="passwordName" type="password" id="password" name="password"
-                               formControlName="password" />
+                               formControlName="password" autocomplete="current-password" />
                         <mat-error *ngIf="hasError('password', 'required')">{{passwordRequired | translate}}</mat-error>
                         <mat-error *ngIf="hasError('password', 'pattern')">{{passwordInvalid | translate}}</mat-error>
                     </mat-form-field>

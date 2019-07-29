@@ -19,14 +19,14 @@
 
                     <mat-form-field>
                         <input matInput [placeholder]="phoneName" type="phone" id="phone" name="phone" [(ngModel)]="phone"
-                               #_phone="ngModel" required [pattern]="phonePattern" (keyup)="onChangePhone()" />
+                               #_phone="ngModel" required [pattern]="phonePattern" (keyup)="onChangePhone()" autocomplete="phone-number" />
                         <mat-error *ngIf="_phone.errors?.required">{{ phoneRequired }}</mat-error>
                         <mat-error *ngIf="_phone.errors?.pattern">{{ phoneInvalid }}</mat-error>
                     </mat-form-field>
 
                     <mat-form-field>
                         <input matInput [placeholder]="codeName" type="url" id="code" name="code" [(ngModel)]="code"
-                               #_code="ngModel" required [pattern]="codePattern" (keyup)="onChangeCode()" />
+                               #_code="ngModel" required [pattern]="codePattern" (keyup)="onChangeCode()" autocomplete="verification-code" />
                         <mat-error *ngIf="_code.errors?.required">{{ codeRequired }}</mat-error>
                         <mat-error *ngIf="_code.errors?.pattern">{{ codeInvalid }}</mat-error>
                     </mat-form-field>

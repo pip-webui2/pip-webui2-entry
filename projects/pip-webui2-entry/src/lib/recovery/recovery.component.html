@@ -17,13 +17,13 @@
                     <a *ngIf="showUrl && !changeUrl" (click)="changeUrl = true" class="pip-link pip-server">{{changeServerUrlName}}</a>
                     <mat-form-field *ngIf="showUrl && changeUrl">
                         <input matInput [placeholder]="serverUrlName" type="url" id="serverUrl" name="serverUrl"
-                               [(ngModel)]="serverUrl" #_serverUrl="ngModel" required [pattern]="serverUrlPattern" />
+                               [(ngModel)]="serverUrl" #_serverUrl="ngModel" required [pattern]="serverUrlPattern" autocomplete="server-url" />
                         <mat-error *ngIf="_serverUrl.errors?.required">{{serverUrlRequired}}</mat-error>
                         <mat-error *ngIf="_serverUrl.errors?.pattern">{{serverUrlInvalid}}</mat-error>
                     </mat-form-field>
                     <mat-form-field>
                         <input matInput [placeholder]="emailName" type="email" id="email" name="email" [(ngModel)]="email"
-                               #_email="ngModel" required [pattern]="emailPattern" />
+                               #_email="ngModel" required [pattern]="emailPattern" autocomplete="email" />
                         <mat-error *ngIf="_email.errors?.required">{{emailRequired}}</mat-error>
                         <mat-error *ngIf="_email.errors?.pattern">{{emailInvalid}}</mat-error>
                     </mat-form-field>

@@ -1,6 +1,6 @@
 {
   "name": "pip-webui2-entry",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -32,7 +32,7 @@
     "@angular/router": "^7.1.1",
     "@ngx-translate/core": "^11.0.1",
     "core-js": "^2.5.4",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "pip-webui2-layouts": "^1.1.10",
     "pip-webui2-nav": "^1.1.9",
     "pip-webui2-themes": "^1.1.11",
@@ -41,10 +41,10 @@
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.11.0",
+    "@angular-devkit/build-angular": "^0.13.9",
     "@angular-devkit/build-ng-packagr": "~0.11.0",
     "@angular/cli": "^7.1.0",
-    "@angular/compiler-cli": "^7.1.1",
+    "@angular/compiler-cli": "^7.2.15",
     "@angular/language-service": "^7.1.1",
     "@types/jasmine": "~3.3.0",
     "@types/jasminewd2": "~2.0.6",
@@ -53,7 +53,7 @@
     "codelyzer": "~4.5.0",
     "jasmine-core": "~3.3.0",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~3.1.1",
+    "karma": "^4.2.0",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
