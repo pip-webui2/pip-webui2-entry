@@ -45,7 +45,7 @@ import { SignupExampleModule } from './signup-example/signup-example.module';
     TranslateModule.forRoot(),
 
     PipThemesModule.forRoot(),
-    PipAppbarModule,
+    PipAppbarModule.forRoot(),
     PipRightnavModule.forRoot(),
     PipMediaModule.forRoot(),
     PipSidenavModule.forRoot(),
