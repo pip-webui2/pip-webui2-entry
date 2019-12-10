@@ -1,4 +1,4 @@
-@import "~pip-webui2-themes/styles.scss";
+@import "~pip-webui2-themes/variables";
 @mixin content($theme) {
     $warn: map-get($theme, warn);
     .pip-error {
@@ -16,58 +16,8 @@
     }
 }
 
-.unicorn-dark-theme {
-    @include content($dark-theme);
-}
-
-.candy-theme {
-    @include content($candy-app-theme);
-}
-
-.pip-blue-theme {
-    @include content($pip-blue-theme);
-}
-
-.pip-grey-theme {
-    @include content($pip-grey-theme);
-}
-
-.pip-navy-theme {
-    @include content($pip-navy-theme);
-}
-
-.pip-amber-theme {
-    @include content($pip-amber-theme);
-}
-
-.pip-green-theme {
-    @include content($pip-green-theme);
-}
-
-.pip-orange-theme {
-    @include content($pip-orange-theme);
-}
-
-.pip-pink-theme {
-    @include content($pip-pink-theme);
-}
-
-.pip-dark-theme {
-    @include content($pip-dark-theme);
-}
-
-.pip-black-theme {
-    @include content($pip-black-theme);
-}
-
-.bootbarn-warm-theme {
-    @include content($bootbarn-warm-theme);
-}
-
-.bootbarn-cool-theme {
-    @include content($bootbarn-cool-theme);
-}
-
-.bootbarn-mono-theme {
-    @include content($bootbarn-mono-theme);
+@each $class, $theme in $themes {
+    .#{$class} {
+        @include content($theme);
+    }
 }

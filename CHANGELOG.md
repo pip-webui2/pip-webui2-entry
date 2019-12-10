@@ -107,3 +107,21 @@ No breaking changes in this version
 
 ### Bug Fixes
 No fixes in this version
+
+## <a name="1.1.10"></a> 1.1.10 (2019-12-10)
+
+`accent` and `primary` colors switched in `mst-elegant-theme`
+
+### Features
+* **email-verification** component
+* **phone-verification** component
+* **password recovery** component
+* **password reset** component
+* **signin** component
+* **signout** component
+
+### Breaking Changes
+No breaking changes in this version
+
+### Bug Fixes
+No fixes in this version
